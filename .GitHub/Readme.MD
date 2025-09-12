@@ -84,7 +84,7 @@
 
 <h1 align="center">─「 ©️ ʟɪᴄᴇɴsᴇ ɴᴏᴛᴇ 」─</h1>
 
-<p>©️ 2025-26 ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ ʙʏ <strong>Purvi Bots (<a href="https://github.com/Im-NotCoder">Im-Notcoder</a>)</strong> 🚀</p>
+<p>©️ 2025-26 ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ ʙʏ <strong>ᴘᴜʀᴠɪ ʙᴏᴛs (<a href="https://github.com/Im-NotCoder">Im-Notcoder</a>)</strong> 🚀</p>
 
 <p>• ᴛʜɪs <a href="https://github.com/Im-NotCoder/Sonali-MusicV2">sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ</a> ɪs ʀᴇʟᴇᴀsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ <strong><a href="https://github.com/Im-NotCoder/Sonali-MusicV2/blob/main/LICENSE">MIT LICENSE</a></strong> 📜</p>
 
