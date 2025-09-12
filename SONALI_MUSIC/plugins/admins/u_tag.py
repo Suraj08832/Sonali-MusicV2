@@ -25,7 +25,7 @@ async def tag_all_users(client: Client, message: Message):
     text = message.text.split(None, 1)[1] if len(message.command) > 1 else ""
 
     if not replied and not text:
-        return await message.reply("**» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ.**")
+        return await message.reply("**» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ/ɢɪᴠᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ. ʟɪᴋᴇ »** `@all Hi Friends`")
 
     spam_chats.add(message.chat.id)
     usernum, usertxt, total_tagged = 0, "", 0
@@ -45,9 +45,9 @@ async def tag_all_users(client: Client, message: Message):
             if usernum == 5:
                 try:
                     if replied:
-                        await replied.reply_text(f"{text}\n{usertxt}\n🏆 ᴛᴏᴛᴀʟ {total_tagged} ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...")
+                        await replied.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
                     else:
-                        await message.reply_text(f"{text}\n{usertxt}\n🏆 ᴛᴏᴛᴀʟ {total_tagged} ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...")
+                        await message.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
                 except FloodWait as e:
                     await asyncio.sleep(e.value)
                 except Exception:
@@ -59,9 +59,9 @@ async def tag_all_users(client: Client, message: Message):
         if usertxt:
             try:
                 if replied:
-                    await replied.reply_text(f"{text}\n{usertxt}\n🏆 ᴛᴏᴛᴀʟ {total_tagged} ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...")
+                    await replied.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
                 else:
-                    await message.reply_text(f"{text}\n{usertxt}\n🏆 ᴛᴏᴛᴀʟ {total_tagged} ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...")
+                    await message.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
             except Exception:
                 pass
 
