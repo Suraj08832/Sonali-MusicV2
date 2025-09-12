@@ -82,7 +82,7 @@ async def unpin(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command("removephoto") & admin_filter)
+@app.on_message(filters.command(["removephoto", "rmphoto", "photoremove"]) & admin_filter)
 async def deletechatphoto(_, message):
       
       chat_id = message.chat.id
@@ -101,7 +101,7 @@ async def deletechatphoto(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command("setphoto")& admin_filter)
+@app.on_message(filters.command(["setphoto", "setph", "photoset"]) & admin_filter)
 async def setchatphoto(_, message):
       reply = message.reply_to_message
       chat_id = message.chat.id
@@ -127,7 +127,7 @@ async def setchatphoto(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command("settitle")& admin_filter)
+@app.on_message(filters.command(["settitle","settit","titleset"]) & admin_filter)
 async def setgrouptitle(_, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
@@ -163,7 +163,7 @@ async def setgrouptitle(_, message):
 
 
 
-@app.on_message(filters.command("setdiscription") & admin_filter)
+@app.on_message(filters.command(["setdiscription","setdis","discset"]) & admin_filter)
 async def setg_discription(_, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
@@ -192,18 +192,6 @@ async def setg_discription(_, message):
     else:
         await msg.edit("**ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴘ ᴅɪsᴄʀɪᴘᴛᴏɴ!**")
 
-
-# --------------------------------------------------------------------------------- #
-
-@app.on_message(filters.command("lg")& filters.user(OWNER_ID))
-async def bot_leave(_, message):
-    chat_id = message.chat.id
-    text = "**sᴜᴄᴄᴇssғᴜʟʟʏ ʜɪʀᴏ !!.**"
-    await message.reply_text(text)
-    await app.leave_chat(chat_id=chat_id, delete=True)
-
-
-# --------------------------------------------------------------------------------- #
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
