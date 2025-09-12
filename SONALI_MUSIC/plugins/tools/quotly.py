@@ -102,7 +102,7 @@ quotly = Quotly()
 
 @app.on_message(filters.command("q") & filters.reply)
 async def quott_(client, message: Message):
-    msg = await message.reply("⚡ Making Quote...")
+    msg = await message.reply("⚡")
     reply = message.reply_to_message
 
     args = message.text.split(None, 1)
