@@ -84,11 +84,11 @@
 
 <h1 align="center">─「 ©️ ʟɪᴄᴇɴsᴇ ɴᴏᴛᴇ 」─</h1>
 
-©️ 2025-26 All Rights Reserved by **Purvi Bots (Im-Notcoder)** 🚀
+<p>©️ 2025-26 ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ ʙʏ <strong>Purvi Bots (<a href="https://github.com/Im-NotCoder">Im-Notcoder</a>)</strong> 🚀</p>
 
-This source code is released under the **MIT License** 📜.  
-❌ Unauthorized forking, importing, or using this code without proper credit will result in legal action ⚠️.
+<p>ᴛʜɪs sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪs ʀᴇʟᴇᴀsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ <strong><a href="https://github.com/Im-NotCoder/Sonali-MusicV2/blob/main/LICENSE">MIT LICENSE</a></strong> 📜 ᴀɴᴅ ɪs ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ <a href="https://github.com/Im-NotCoder/Sonali-MusicV2">sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ</a>.</p>
 
+<p>❌ ᴜɴᴀᴜᴛʜᴏʀɪᴢᴇᴅ ғᴏʀᴋɪɴɢ, ɪᴍᴘᴏʀᴛɪɴɢ, ᴏʀ ᴜsɪɴɢ ᴛʜɪs ᴄᴏᴅᴇ ᴡɪᴛʜᴏᴜᴛ ᴘʀᴏᴘᴇʀ ᴄʀᴇᴅɪᴛ ᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ ʟᴇɢᴀʟ ᴀᴄᴛɪᴏɴ ⚠️.</p>
 <p align="center">  
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>  
 </p>  
