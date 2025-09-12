@@ -38,7 +38,7 @@ async def get_group_status(_, message: Message):
         f"**➲ TOTAL MEMBERS :-** {total_members}\n"
         f"**➲ DESCRIPTION :-** {group_description or 'N/A'}\n"
         f"**➲ USERNAME :-** {group_username}\n\n"
-        f"**➲ CHECK BY :-** {app.mention}\n"      
+        f"**➲ CHECK BY :- {app.mention}**\n"      
         f"**➖➖➖➖➖➖➖➖➖**"
     )
     
