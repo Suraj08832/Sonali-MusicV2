@@ -37,7 +37,7 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Im-Notcoder/SonaliV2")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Im-NotCoder/Sonali-MusicV2")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
 GIT_TOKEN = getenv("GIT_TOKEN", "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")
