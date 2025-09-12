@@ -9,7 +9,7 @@
 from io import BytesIO
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from SONALI_MUSIC import app
+from ANNIEMUSIC import app
 from httpx import AsyncClient, Timeout
 
 # -----------------------------------------------------------------
@@ -272,7 +272,7 @@ async def msg_quotly_cmd(self: Client, ctx: Message):
         return await ctx.reply_text("Invalid range", delete_after=6)
     
     # Send processing message
-    processing_msg = await ctx.reply_text("⚡")
+    processing_msg = await ctx.reply_text("❄️")
     try:
         if count == 1:
             messages = [ctx.reply_to_message]
@@ -299,6 +299,12 @@ async def msg_quotly_cmd(self: Client, ctx: Message):
         await ctx.reply_text(f"ERROR: {e}")
     finally:
         await processing_msg.delete()
+# ---------------------------------------------------------------------------------
+
+
+
+        
+       
 # ---------------------------------------------------------------------------------
             
 # ---------------------------------------------------------------------------------
