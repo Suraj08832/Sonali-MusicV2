@@ -122,7 +122,7 @@ async def set_volume(client, message: Message):
         )
     
     try:
-        await SONA.change_volume(chat_id, volume_level)
+        await Sona.change_volume(chat_id, volume_level)
         await message.reply_text(
             f"**🔊 sᴛʀᴇᴀᴍ ᴠᴏʟᴜᴍᴇ sᴇᴛ ᴛᴏ :-** `{volume_level}`\n**└ ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :- {message.from_user.mention} 🥀**"
         )
