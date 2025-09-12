@@ -202,12 +202,7 @@ async def style(c, m):
         pass
 
 
-__help__ = """
 
- ❍ /fonts <text> *:* ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
- """
-
-__mod_name__ = "Fᴏɴᴛ"
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
