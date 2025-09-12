@@ -6,7 +6,7 @@
 # 📩 DM for permission : @TheSigmaCoder
 # =======================================================
 
- from io import BytesIO
+from io import BytesIO
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from SONALI_MUSIC import app
