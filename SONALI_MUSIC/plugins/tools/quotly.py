@@ -109,20 +109,30 @@ async def quott_(client, message: Message):
     arg = args[1].lower() if len(args) > 1 else None
 
     bg = "#1b1429"
+
+    # Default सिर्फ reply वाला message
     msgs = [reply]
 
-    # /q r -> reply + replied_to दोनों भेजो
+    # Agar /q r diya ho
     if arg in ["r", "reply"] and reply.reply_to_message:
-        msgs.append(reply.reply_to_message)
+        msgs = [reply.reply_to_message, reply]   # dono messages ek sath
 
-    # /q random -> random bg
-    if arg == "random":
+    # Agar /q 5 diya ho
+    elif arg and arg.isdigit():
+        limit = int(arg)
+        msgs = []
+        async for m in client.get_chat_history(message.chat.id, limit=limit, offset_id=reply.id):
+            msgs.append(m)
+        msgs = list(reversed(msgs))
+
+    # Agar /q random diya ho
+    elif arg == "random":
         bg = choice(["#1b1429", "#2a2139", "#ff006e", "#8338ec", "#3a86ff"])
 
     try:
-        file = await quotly.create_quotly(list(reversed(msgs)), bg=bg)
+        file = await quotly.create_quotly(msgs, bg=bg)
     except Exception as e:
-        return await msg.edit(str(e))
+        return await msg.edit(f"❌ Error: {e}")
 
     await message.reply_document(file)
     os.remove(file)
