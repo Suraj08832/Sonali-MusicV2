@@ -14,9 +14,6 @@ from SONALI_MUSIC.utils import SonaBin
 from SONALI_MUSIC.utils.database import get_assistant, get_lang
 from SONALI_MUSIC.core.call import Sona
 
-from pyrogram.types import Message
-from SONALI_MUSIC.utils.admin_filters import admin_filter
-
 
 async def is_admin(_, __, message):
     try:
@@ -86,50 +83,6 @@ async def vc_members(client, message):
     except ValueError:
         await msg.edit(_["V_C_5"])
 
-
-
-
-@app.on_message(filters.command("volume") & filters.group & admin_filter)
-async def set_volume(client, message: Message):
-    chat_id = message.chat.id
-
-    args = message.text.split(maxsplit=1)
-    if len(args) < 2:
-        return await message.reply_text(
-            "**⚠️ ᴜsᴀɢᴇ :-** `/volume 1-200`"
-        )
-    
-    try:
-        volume_level = int(args[1])
-    except ValueError:
-        return await message.reply_text(
-            "**❌ ɪɴᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ. ᴘʟᴇᴀsᴇ ᴜsᴇ :-** `/volume 1-200`"
-        )
-    
-    if volume_level == 0:
-        return await message.reply_text(
-            "**🔇 ᴜsᴇ** `/mute` **ᴛᴏ ᴍᴜᴛᴇ ᴛʜᴇ sᴛʀᴇᴀᴍ**"
-        )
-    
-    if not 1 <= volume_level <= 200:
-        return await message.reply_text(
-            "**⚠️ ᴠᴏʟᴜᴍᴇ ᴍᴜsᴛ ʙᴇ ʙᴇᴛᴡᴇᴇɴ 1 ᴀɴᴅ 200**"
-        )
-    
-    if chat_id >= 0:
-        return await message.reply_text(
-            "**❌ ᴠᴏʟᴜᴍᴇ ᴄᴏɴᴛʀᴏʟ ɪs ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ ɪɴ ʙᴀsɪᴄ ɢʀᴏᴜᴘs**"
-        )
-    
-    try:
-        await Sona.change_volume(chat_id, volume_level)
-        await message.reply_text(
-            f"**🔊 sᴛʀᴇᴀᴍ ᴠᴏʟᴜᴍᴇ sᴇᴛ ᴛᴏ :-** `{volume_level}`\n**└ ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :- {message.from_user.mention} 🥀**"
-        )
-    except Exception as e:
-        await message.reply_text(
-            f"**❌ ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴠᴏʟᴜᴍᴇ. ᴇʀʀᴏʀ :-** {e}"
-        )
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
