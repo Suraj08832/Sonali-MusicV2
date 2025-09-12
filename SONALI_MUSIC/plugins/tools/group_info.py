@@ -16,7 +16,7 @@ from asyncio import sleep
 @app.on_message(filters.command("groupinfo", prefixes="/"))
 async def get_group_status(_, message: Message):
     if len(message.command) != 2:
-        await message.reply("Please provide a group username. Example: `/groupinfo YourGroupUsername`")
+        await message.reply("**ᴘʀᴏᴠɪᴅᴇ ᴀ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ. ᴇxᴀᴍᴘʟᴇ :-** `/groupinfo @Purvi_updates`")
         return
     
     group_username = message.command[1]
@@ -54,7 +54,7 @@ async def instatus(app, message):
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
     ):
-        sent_message = await message.reply_text("GETTING INFORMATION...")
+        sent_message = await message.reply_text("**ɢᴇᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ...**")
         deleted_acc = 0
         premium_acc = 0
         banned = 0
@@ -86,7 +86,7 @@ async def instatus(app, message):
 ➖➖➖➖➖➖➖➖➖
 TIME TAKEN :- {timelog} S**""")
     else:
-        sent_message = await message.reply_text("**ONLY ADMINS CAN USE THIS !**")
+        sent_message = await message.reply_text("**ᴏɴʟʏ ᴀᴅᴍɪɴs ᴜsᴇ ᴛʜɪs !**")
         await sleep(5)
         await sent_message.delete()
 
