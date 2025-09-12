@@ -108,26 +108,18 @@ async def quott_(client, message: Message):
     args = message.text.split(None, 1)
     arg = args[1].lower() if len(args) > 1 else None
 
-    bg = "#1b1429"
+    # 🔥 Always random background
+    bg = choice([
+        "#1b1429", "#2a2139", "#ff006e",
+        "#8338ec", "#3a86ff", "#ffbe0b",
+        "#fb5607", "#ff006e", "#06d6a0"
+    ])
 
-    # Default सिर्फ reply वाला message
     msgs = [reply]
 
-    # Agar /q r diya ho
+    # /q r -> reply + jispe reply kiya hai dono ek hi quote me
     if arg in ["r", "reply"] and reply.reply_to_message:
-        msgs = [reply.reply_to_message, reply]   # dono messages ek sath
-
-    # Agar /q 5 diya ho
-    elif arg and arg.isdigit():
-        limit = int(arg)
-        msgs = []
-        async for m in client.get_chat_history(message.chat.id, limit=limit, offset_id=reply.id):
-            msgs.append(m)
-        msgs = list(reversed(msgs))
-
-    # Agar /q random diya ho
-    elif arg == "random":
-        bg = choice(["#1b1429", "#2a2139", "#ff006e", "#8338ec", "#3a86ff"])
+        msgs = [reply.reply_to_message, reply]
 
     try:
         file = await quotly.create_quotly(msgs, bg=bg)
