@@ -108,23 +108,26 @@ async def quott_(client, message: Message):
     args = message.text.split(None, 1)
     arg = args[1].lower() if len(args) > 1 else None
 
-    replied_to = None
     bg = "#1b1429"
 
+    # अगर user ने /q r दिया
     if arg in ["r", "reply"] and reply.reply_to_message:
-        replied_to = reply.reply_to_message
-    elif arg == "random":
+        msgs = [reply, reply.reply_to_message]   # दोनों messages भेजो
+    else:
+        msgs = [reply]
+
+    # random bg
+    if arg == "random":
         bg = choice(["#1b1429", "#2a2139", "#ff006e", "#8338ec", "#3a86ff"])
 
     try:
-        file = await quotly.create_quotly(reply, bg=bg, reply=replied_to)
+        file = await quotly.create_quotly(msgs, bg=bg)
     except Exception as e:
         return await msg.edit(str(e))
 
     await message.reply_document(file)
     os.remove(file)
     await msg.delete()
-                
             
 # ---------------------------------------------------------------------------------
 
