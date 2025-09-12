@@ -58,7 +58,7 @@ speedtest-cli
 spotipy
 sympy
 
-telegram
+telegraph
 tgcrypto
 
 unidecode
