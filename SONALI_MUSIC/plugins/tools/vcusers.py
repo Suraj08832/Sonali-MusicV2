@@ -15,7 +15,6 @@ from SONALI_MUSIC.utils.database import get_assistant, get_lang
 from SONALI_MUSIC.core.call import Sona
 
 from pyrogram.types import Message
-from SONALI_MUSIC.core.call import SONA
 from SONALI_MUSIC.utils.admin_filters import admin_filter
 
 
