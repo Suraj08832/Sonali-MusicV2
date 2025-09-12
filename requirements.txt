@@ -25,7 +25,7 @@ gtts
 
 hachoir
 heroku3
-httpx[http2]==0.27.2
+httpx[http2]==0.28.1
 
 lexica-api==1.5.1
 
