@@ -1,5 +1,6 @@
-aiofiles
+aiofiles==24.1.0
 bard
+bs4
 SpeechRecognition
 aiohttp 
 asyncio
@@ -11,7 +12,6 @@ gitpython
 hachoir
 Faker
 pydub
-#lottie==3.5.5
 pycountry
 heroku3
 apscheduler
@@ -55,4 +55,3 @@ bing-image-urls
 bing_image_downloader
 googlesearch-python
 sympy
-qrcode
