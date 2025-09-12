@@ -4,8 +4,6 @@ apscheduler
 asyncio
 
 bard
-bing-image-urls
-bing_image_downloader
 bs4
 
 deepai
