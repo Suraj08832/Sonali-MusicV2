@@ -11,7 +11,7 @@ from contextlib import suppress
 from string import ascii_lowercase
 from typing import Dict, Union
 
-from pyrogram import filters
+from pyrogram import filters, enums
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import (
     CallbackQuery,
@@ -27,9 +27,9 @@ from SONALI_MUSIC.utils.database import save_filter
 from SONALI_MUSIC.utils.functions import extract_user, extract_user_and_reason
 from SONALI_MUSIC.utils.permissions import adminsOnly, member_permissions
 from config import BANNED_USERS
+from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 
 
-# MongoDB collection
 warnsdb = mongodb.warns
 
 
@@ -105,9 +105,10 @@ async def kick_user(_, message: Message):
 
     mention = (await app.get_users(user_id)).mention
     msg = f"""
-**ᴋɪᴄᴋᴇᴅ :-** {mention}
-**ᴋɪᴄᴋ ʙʏ :-** {message.from_user.mention if message.from_user else 'ᴀɴᴏɴᴍᴏᴜs'}
-**ʀᴇᴀsᴏɴ :-** {reason or 'ɴᴏ ʀᴇᴀsᴏɴ ᴘʀᴏᴠɪᴅᴇᴅ'}
+**» ᴋɪᴄᴋᴇᴅ :-** {mention}
+
+**» ᴋɪᴄᴋ ʙʏ :-** {message.from_user.mention if message.from_user else 'ᴀɴᴏɴᴍᴏᴜs'}
+**» ʀᴇᴀsᴏɴ :-** {reason or 'ɴᴏ ʀᴇᴀsᴏɴ ᴘʀᴏᴠɪᴅᴇᴅ'}
 """
 
     await message.chat.ban_member(user_id)
@@ -121,6 +122,35 @@ async def kick_user(_, message: Message):
     if message.command[0].startswith("s") and message.reply_to_message:
         await message.reply_to_message.delete()
         await app.delete_user_history(message.chat.id, user_id)
+
+
+
+@app.on_message(filters.command("kickme"))
+async def kickme_cmd(client, message: Message):
+    if message.chat.type == enums.ChatType.PRIVATE:
+        return await message.reply_text("**ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋs ᴏɴʟʏ ɪɴ ɢʀᴏᴜᴘs.** 😅")
+
+    try:
+        member = await client.get_chat_member(message.chat.id, message.from_user.id)
+        if member.status in [enums.ChatMemberStatus.OWNER, enums.ChatMemberStatus.ADMINISTRATOR]:
+            return await message.reply_text("**ɪ ᴄᴀɴ'ᴛ ᴋɪᴄᴋ ᴀᴅᴍɪɴs ᴏʀ ᴄʀᴇᴀᴛᴏʀs.** 😎")
+
+        # Kick user
+        await client.ban_chat_member(message.chat.id, message.from_user.id)
+        await asyncio.sleep(3)
+        await client.unban_chat_member(message.chat.id, message.from_user.id)
+
+        # Goodbye message in smallcaps
+        goodbye_msg = f"**👋 ʙʏᴇ ʙʏᴇ {message.from_user.mention}! ʜᴀᴠᴇ ᴀ ɴɪᴄᴇ ᴅᴀʏ!** 🌸"
+        await message.reply_text(goodbye_msg)
+
+    except ChatAdminRequired:
+        await message.reply_text("**ɪ ɴᴇᴇᴅ ʙᴀɴ ᴘᴇʀᴍɪssɪᴏɴs.** ❌")
+    except UserNotParticipant:
+        await message.reply_text("**ʜᴍᴍ, ɪᴛ sᴇᴇᴍs ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.** 🤔")
+    except Exception as e:
+        await message.reply_text(f"**ᴇʀʀᴏʀ :-** {e}")
+
 
 
 # ---------------------- WARN COMMAND ---------------------- #
