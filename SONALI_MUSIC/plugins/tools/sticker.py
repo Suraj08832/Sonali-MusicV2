@@ -18,8 +18,6 @@ from uuid import uuid4
 from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 
 
-######### sticker id
-
 @app.on_message(filters.command("packkang"))
 async def _packkang(app :app,message):  
     txt = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ....**")
@@ -69,12 +67,11 @@ async def _packkang(app :app,message):
                 stickers=sticks,
             )
         )
-        await txt.edit(f"**ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴋᴀɴɢᴇᴅ ʟɪɴᴋ**!\n**ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ **: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴘᴀᴄᴋ ʟɪɴᴋ",url=f"http://t.me/addstickers/{short_name}")]]))
+        await txt.edit(f"**ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴋᴀɴɢᴇᴅ ʟɪɴᴋ**!\n\n**ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ **:- {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴘᴀᴄᴋ ʟɪɴᴋ",url=f"http://t.me/addstickers/{short_name}")]]))
     except Exception as e:
         await message.reply(str(e))
 
 
-###### sticker id =
 @app.on_message(filters.command(["stickerid","stid"]))
 async def sticker_id(app: app, msg):
     if not msg.reply_to_message:
@@ -83,10 +80,25 @@ async def sticker_id(app: app, msg):
         await msg.reply_text("Reply to a sticker")        
     st_in = msg.reply_to_message.sticker
     await msg.reply_text(f"""
-⊹ <u>**sᴛɪᴄᴋᴇʀ ɪɴғᴏ**</u> ⊹
+⊹ <u>**sᴛɪᴄᴋᴇʀ ɪɴғᴏ**</u> ⊹\n\n
 **⊚ sᴛɪᴄᴋᴇʀ ɪᴅ **: `{st_in.file_id}`\n
 **⊚ sᴛɪᴄᴋᴇʀ ᴜɴɪǫᴜᴇ ɪᴅ **: `{st_in.file_unique_id}`
 """)
+
+
+@app.on_message(filters.command("st"))
+async def generate_sticker(client, message):
+    if len(message.command) == 2:
+        sticker_id = message.command[1]
+        try:
+            await client.send_sticker(message.chat.id, sticker=sticker_id)
+        except Exception as e:
+            await message.reply_text(f"**ᴇʀʀᴏʀ :-** `{e}`")
+    else:
+        await message.reply_text(
+            "**ᴘʀᴏᴠɪᴅᴇ ᴀ sᴛɪᴄᴋᴇʀ ɪᴅ ᴀғᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ.**\n\n"
+            "**ᴜsᴀɢᴇ :-** `/st sticker_id`"
+        )
 
 
 #####
