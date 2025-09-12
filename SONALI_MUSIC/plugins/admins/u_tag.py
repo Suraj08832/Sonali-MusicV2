@@ -25,7 +25,7 @@ async def tag_all_users(client: Client, message: Message):
     text = message.text.split(None, 1)[1] if len(message.command) > 1 else ""
 
     if not replied and not text:
-        return await message.reply("**» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ/ɢɪᴠᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ. ʟɪᴋᴇ »** `@all Hi Friends`")
+        return await message.reply("**» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ/ɢɪᴠᴇ ᴛᴇxᴛ ᴛᴏ ᴛᴀɢ ᴀʟʟ ʟɪᴋᴇ »** `/all Hi Friends`")
 
     spam_chats.add(message.chat.id)
     usernum, usertxt, total_tagged = 0, "", 0
