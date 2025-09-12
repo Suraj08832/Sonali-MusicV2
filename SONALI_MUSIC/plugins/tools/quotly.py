@@ -102,26 +102,25 @@ quotly = Quotly()
 
 @app.on_message(filters.command("q") & filters.reply)
 async def quott_(client, message: Message):
-    msg = await message.reply("⚡")
+    msg = await message.reply("⚡ Making Quote...")
     reply = message.reply_to_message
 
     args = message.text.split(None, 1)
     arg = args[1].lower() if len(args) > 1 else None
 
     bg = "#1b1429"
+    msgs = [reply]
 
-    # अगर user ने /q r दिया
+    # /q r -> reply + replied_to दोनों भेजो
     if arg in ["r", "reply"] and reply.reply_to_message:
-        msgs = [reply, reply.reply_to_message]   # दोनों messages भेजो
-    else:
-        msgs = [reply]
+        msgs.append(reply.reply_to_message)
 
-    # random bg
+    # /q random -> random bg
     if arg == "random":
         bg = choice(["#1b1429", "#2a2139", "#ff006e", "#8338ec", "#3a86ff"])
 
     try:
-        file = await quotly.create_quotly(msgs, bg=bg)
+        file = await quotly.create_quotly(list(reversed(msgs)), bg=bg)
     except Exception as e:
         return await msg.edit(str(e))
 
