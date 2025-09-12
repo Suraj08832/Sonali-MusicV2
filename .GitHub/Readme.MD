@@ -82,6 +82,17 @@
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>
 </p>
 
+<h1 align="center">─「 ©️ ʟɪᴄᴇɴsᴇ ɴᴏᴛᴇ 」─</h1>
+
+©️ 2025-26 All Rights Reserved by **Purvi Bots (Im-Notcoder)** 🚀
+
+This source code is released under the **MIT License** 📜.  
+❌ Unauthorized forking, importing, or using this code without proper credit will result in legal action ⚠️.
+
+<p align="center">  
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"/>  
+</p>  
+
 <h1 align="center">─「 ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ 」─</h1>  
 
 <p align="center">  
