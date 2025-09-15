@@ -15,60 +15,34 @@ from SONALI_MUSIC import app
 class BUTTONS(object):
     BBUTTON = [
         [
-            InlineKeyboardButton("ᴄʜᴧᴛ-ɢᴘᴛ", callback_data="TOOL_BACK HELP_01"),
-            InlineKeyboardButton("ғυη", callback_data="TOOL_BACK HELP_11"),
-            InlineKeyboardButton("ᴄσᴜᴘʟєs", callback_data="TOOL_BACK HELP_08"),
+            InlineKeyboardButton("• ᴀᴄᴛɪᴏɴ •", callback_data="TOOL_BACK HELP_01"),
+            InlineKeyboardButton("• ᴀɴᴛɪ-ғʟᴏᴏᴅ •", callback_data="TOOL_BACK HELP_11"),
+            InlineKeyboardButton("• ᴀᴘᴘʀᴏᴠᴀʟ •", callback_data="TOOL_BACK HELP_08"),
         ],
         [
-            InlineKeyboardButton("sєᴧʀᴄʜ", callback_data="TOOL_BACK HELP_02"),
-            InlineKeyboardButton("ᴛʀᴧηsʟᴧᴛє", callback_data="TOOL_BACK HELP_24"),
-            InlineKeyboardButton("ɪηғσ", callback_data="TOOL_BACK HELP_04"),
+            InlineKeyboardButton("• ᴄʜᴀᴛ-ɢᴘᴛ •", callback_data="TOOL_BACK HELP_02"),
+            InlineKeyboardButton("• ɢɪᴛʜᴜʙ •", callback_data="TOOL_BACK HELP_24"),
+            InlineKeyboardButton("• ɢʀᴏᴜᴘ •", callback_data="TOOL_BACK HELP_04"),
         ],
         [
-            InlineKeyboardButton("ғσηᴛ", callback_data="TOOL_BACK HELP_05"),
-            InlineKeyboardButton("ᴡʜɪsᴘєʀ", callback_data="TOOL_BACK HELP_03"),
-            InlineKeyboardButton("ᴛᴧɢᴧʟʟ", callback_data="TOOL_BACK HELP_07"),
+            InlineKeyboardButton("• ʜɪsᴛᴏʀʏ •", callback_data="TOOL_BACK HELP_05"),
+            InlineKeyboardButton("• ɪɴғᴏ •", callback_data="TOOL_BACK HELP_03"),
+            InlineKeyboardButton("• ᴘᴜʀɢᴇ •", callback_data="TOOL_BACK HELP_07"),
         ],
         [
-            InlineKeyboardButton("ɢᴧϻє", callback_data="TOOL_BACK HELP_21"),
-            InlineKeyboardButton("sєᴛᴜᴘ", callback_data="TOOL_BACK HELP_17"),
-            InlineKeyboardButton("ǫυσᴛʟʏ", callback_data="TOOL_BACK HELP_12"),
+            InlineKeyboardButton("• sᴛɪᴄᴋᴇʀ•", callback_data="TOOL_BACK HELP_21"),
+            InlineKeyboardButton("• ᴛᴀɢ-ᴀʟʟ •", callback_data="TOOL_BACK HELP_17"),
+            InlineKeyboardButton("• ᴛᴏᴏʟs •", callback_data="TOOL_BACK HELP_12"),
         ],
         [
-            InlineKeyboardButton("ɢɪᴛʜᴜʙ", callback_data="TOOL_BACK HELP_25"),
-            InlineKeyboardButton("Ⓣ-ɢʀᴧᴘʜ", callback_data=f"TOOL_BACK HELP_26"),
-            InlineKeyboardButton("sᴛɪᴄᴋєʀs", callback_data="TOOL_BACK HELP_10"),
-        ],
-        [InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data=f"MAIN_CP")]
-    ]
+            InlineKeyboardButton("• ᴠᴄ-ᴛᴏᴏʟs •", callback_data="TOOL_BACK HELP_25"),
+            InlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data=f"TOOL_BACK HELP_26"),
+            InlineKeyboardButton("• ᴡʜɪsᴘᴇʀ•", callback_data="TOOL_BACK HELP_10"),
+        ]
     
     
-    MBUTTON = [
-
-        [
-            InlineKeyboardButton("ᴀɴᴛɪ ғʟᴏᴏᴅ", callback_data="MANAGEMENT_BACK HELP_28"),
-            InlineKeyboardButton("ᴀᴘᴘʀᴏᴠᴀʟ", callback_data="MANAGEMENT_BACK HELP_29"),
-            InlineKeyboardButton("ʙᴜɢs", callback_data="MANAGEMENT_BACK HELP_30"),
-        ],
-        [
-            InlineKeyboardButton("ᴄᴏᴜɴᴛʀʏ", callback_data="MANAGEMENT_BACK HELP_31"),
-            InlineKeyboardButton("ᴘᴜʀɢᴇ", callback_data="MANAGEMENT_BACK HELP_32"),
-            InlineKeyboardButton("ᴘʏᴛʜᴏɴ", callback_data="MANAGEMENT_BACK HELP_33"),
-        ],
-        [
-            InlineKeyboardButton("ʀᴀɴᴋɪɴɢ", callback_data="MANAGEMENT_BACK HELP_34"),
-            InlineKeyboardButton("ʀᴛᴍᴘ ʟɪᴠᴇ", callback_data="MANAGEMENT_BACK HELP_35"),
-            InlineKeyboardButton("ᴠᴄ ᴛᴏᴏʟs", callback_data="MANAGEMENT_BACK HELP_36"),
-        ],
-        [
-            InlineKeyboardButton("ᴧᴄᴛɪση", callback_data="MANAGEMENT_BACK HELP_14"),
-            InlineKeyboardButton("ʜɪsᴛᴏʀʏ", callback_data="MANAGEMENT_BACK HELP_23"),
-            InlineKeyboardButton("ᴛᴛs", callback_data="MANAGEMENT_BACK HELP_27"),
-        ],
-        [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data=f"MAIN_CP"), 
-        ]
-        ]
+    
+    
     PBUTTON = [
         [
             InlineKeyboardButton("˹ ᴄσηᴛᴧᴄᴛ ˼", url="https://t.me/TheSigmaCoder"),
