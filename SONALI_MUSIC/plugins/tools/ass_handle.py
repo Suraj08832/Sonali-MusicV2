@@ -70,7 +70,7 @@ async def set_bio(_, message: Message):
 
 
 
-@app.on_message(filters.command(["assname", "setname"]) & filters.user(OWNER_ID))
+@app.on_message(filters.command(["assname", "nameset"]) & filters.user(OWNER_ID))
 async def set_name(_, message: Message):
     msg = message.reply_to_message
     if msg and msg.text:
