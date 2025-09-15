@@ -78,7 +78,7 @@ async def kang(client, message: Message):
         return await message.reply_text(
             "**✦ ʏᴏᴜ ᴀʀᴇ ᴀɴᴏɴ ᴀᴅᴍɪɴ, ᴋᴀɴɢ sᴛɪᴄᴋᴇʀs ɪɴ ᴍʏ ᴅᴍ.**"
         )
-    msg = await message.reply_text("**✦ ᴋᴀɴɢɪɴɢ sɪᴄᴋᴇʀ...**")
+    msg = await message.reply_text("**✦ ᴋᴀɴɢɪɴɢ sᴛɪᴄᴋᴇʀ...**")
 
     # Find the proper emoji
     args = message.text.split()
