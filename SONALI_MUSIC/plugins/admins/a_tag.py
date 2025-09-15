@@ -127,7 +127,7 @@ async def admintag_with_reporting(client, message):
 
 @app.on_message(
     filters.command(
-        ["stoptag", "astop", "tagstop", "tagoff"],
+        ["stoptag", "astop"],
         prefixes=["/", "@"],
     )
 )
