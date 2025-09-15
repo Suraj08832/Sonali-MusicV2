@@ -1,6 +1,11 @@
 # =======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+
+# This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
+ 
+# 📩 DM for permission : @TheSigmaCoder
 # =======================================================
+
 
 import asyncio
 from pyrogram import Client, filters, enums
@@ -8,18 +13,17 @@ from pyrogram.errors import UserNotParticipant, FloodWait
 from pyrogram.types import Message
 
 from SONALI_MUSIC import app
-from SONALI_MUSIC.utils.admin_filters import admin_filter
 
 spam_chats = set()
 
 
-@app.on_message(filters.command(["utag", "all", "mention"], prefixes=["/", "@"]) & filters.group & admin_filter)
+@app.on_message(filters.command(["utag", "all", "mention"], prefixes=["/", "@"]))
 async def tag_all_users(client: Client, message: Message):
-   
+    # Private chat check
     if message.chat.type == enums.ChatType.PRIVATE:
         return await message.reply("⬤ **ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.**")
 
-   
+    # Admin check
     member = await client.get_chat_member(message.chat.id, message.from_user.id)
     if member.status not in [enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER]:
         return await message.reply("⬤ **ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ.**")
@@ -84,7 +88,7 @@ async def tag_all_users(client: Client, message: Message):
 
 @app.on_message(filters.command(["cancel", "ustop"], prefixes=["/", "@"]))
 async def cancel_spam(client: Client, message: Message):
-    # group check
+    # Private chat check
     if message.chat.type == enums.ChatType.PRIVATE:
         return await message.reply("⬤ **ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.**")
 
@@ -107,4 +111,8 @@ async def cancel_spam(client: Client, message: Message):
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
-# ======================================================
+
+# 🧑‍💻 Developer : t.me/TheSigmaCoder
+# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
+# 📢 Telegram channel : t.me/Purvi_Bots
+# =======================================================
