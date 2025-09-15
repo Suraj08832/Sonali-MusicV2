@@ -29,7 +29,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER(__name__).error("𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐍𝐨𝐭 𝐅𝐢𝐥𝐥𝐞𝐝, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐅𝐢𝐥𝐥 𝐀 𝐏𝐲𝐫𝐨𝐠𝐫𝐚𝐦 𝐒𝐞𝐬𝐬𝐢𝐨𝐧")
+        LOGGER(__name__).error("𝗦𝗧𝗥𝗜𝗡𝗚 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗡𝗢𝗧 𝗙𝗜𝗟𝗟𝗘𝗗 🙃, 𝗣𝗟𝗘𝗔𝗦𝗘 𝗙𝗜𝗟𝗟 𝗔 𝗣𝗬𝗥𝗢𝗚𝗥𝗔𝗠 𝗦𝗘𝗦𝗦𝗜𝗢𝗡...🙂")
         exit()
     await sudo()
     try:
@@ -44,26 +44,26 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("SONALI_MUSIC.plugins" + all_module)
-    LOGGER("SONALI_MUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
+    LOGGER("SONALI_MUSIC.plugins").info("𝗔𝗟𝗟 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗟𝗢𝗔𝗗𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬....🥳...")
     await userbot.start()
     await Sona.start()
     try:
         await Sona.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("SONALI_MUSIC").error(
-            "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗧𝗛𝗨𝗡𝗗𝗘𝗥 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
+            "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧/𝗖𝗛𝗔𝗡𝗡𝗘𝗟... 😒\n\n𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........🤕"
         )
         exit()
     except:
         pass
     await Sona.decorators()
     LOGGER("SONALI_MUSIC").info(
-        "╔═════ஜ۩۞۩ஜ════╗\n  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗔𝗟𝗣𝗛𝗔☠︎︎\n╚═════ஜ۩۞۩ஜ════╝"
+        "╔═════ஜ۩۞۩ஜ════╗\n☠︎︎ 𝗠𝗔𝗗𝗘 𝗕𝗬 𝗣𝗨𝗥𝗩𝗜 𝗕𝗢𝗧𝗦 ☠︎︎\n╚═════ஜ۩۞۩ஜ════╝"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("SONALI_MUSIC").info("𝗦𝗧𝗢𝗣 𝗦𝗢𝗡𝗔𝗟𝗜 𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧..")
+    LOGGER("SONALI_MUSIC").info("𝗦𝗧𝗢𝗣 𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧...🥺")
 
 
 if __name__ == "__main__":
