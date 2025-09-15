@@ -1,15 +1,9 @@
 # =======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
-
-# This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
- 
-# 📩 DM for permission : @TheSigmaCoder
 # =======================================================
 
-
 import asyncio
-from pyrogram import Client, filters
-from pyrogram.enums import ChatMemberStatus
+from pyrogram import Client, filters, enums
 from pyrogram.errors import UserNotParticipant, FloodWait
 from pyrogram.types import Message
 
@@ -19,8 +13,17 @@ from SONALI_MUSIC.utils.admin_filters import admin_filter
 spam_chats = set()
 
 
-@app.on_message(filters.command(["utag", "all", "mention"]) & filters.group & admin_filter)
+@app.on_message(filters.command(["utag", "all", "mention"], prefixes=["/", "@"]) & filters.group & admin_filter)
 async def tag_all_users(client: Client, message: Message):
+   
+    if message.chat.type == enums.ChatType.PRIVATE:
+        return await message.reply("⬤ **ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.**")
+
+   
+    member = await client.get_chat_member(message.chat.id, message.from_user.id)
+    if member.status not in [enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER]:
+        return await message.reply("⬤ **ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ.**")
+
     replied = message.reply_to_message
     text = message.text.split(None, 1)[1] if len(message.command) > 1 else ""
 
@@ -45,9 +48,13 @@ async def tag_all_users(client: Client, message: Message):
             if usernum == 5:
                 try:
                     if replied:
-                        await replied.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
+                        await replied.reply_text(
+                            f"{text}\n\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**"
+                        )
                     else:
-                        await message.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
+                        await message.reply_text(
+                            f"{text}\n\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**"
+                        )
                 except FloodWait as e:
                     await asyncio.sleep(e.value)
                 except Exception:
@@ -59,9 +66,13 @@ async def tag_all_users(client: Client, message: Message):
         if usertxt:
             try:
                 if replied:
-                    await replied.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
+                    await replied.reply_text(
+                        f"{text}\n\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**"
+                    )
                 else:
-                    await message.reply_text(f"{text}\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**")
+                    await message.reply_text(
+                        f"{text}\n\n{usertxt}\n**🏆 ᴛᴏᴛᴀʟ** `{total_tagged}` **ᴜsᴇʀs ᴛᴀɢs ᴅᴏɴᴇ...**"
+                    )
             except Exception:
                 pass
 
@@ -71,8 +82,12 @@ async def tag_all_users(client: Client, message: Message):
         spam_chats.discard(message.chat.id)
 
 
-@app.on_message(filters.command(["cancel", "ustop"]))
+@app.on_message(filters.command(["cancel", "ustop"], prefixes=["/", "@"]))
 async def cancel_spam(client: Client, message: Message):
+    # group check
+    if message.chat.type == enums.ChatType.PRIVATE:
+        return await message.reply("⬤ **ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.**")
+
     chat_id = message.chat.id
 
     if chat_id not in spam_chats:
@@ -80,8 +95,8 @@ async def cancel_spam(client: Client, message: Message):
 
     try:
         member = await client.get_chat_member(chat_id, message.from_user.id)
-        if member.status not in (ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER):
-            return await message.reply("**» ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴄᴀɴᴄᴇʟ ᴛᴀɢɢɪɴɢ.**")
+        if member.status not in (enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER):
+            return await message.reply("⬤ **ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ.**")
     except UserNotParticipant:
         return await message.reply("**» ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛ ᴏғ ᴛʜɪs ᴄʜᴀᴛ.**")
     except Exception:
@@ -92,8 +107,4 @@ async def cancel_spam(client: Client, message: Message):
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
-
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
-# =======================================================
+# ======================================================
