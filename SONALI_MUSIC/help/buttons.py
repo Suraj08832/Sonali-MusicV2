@@ -36,7 +36,7 @@ class BUTTONS(object):
         ],
         [
             InlineKeyboardButton("• ᴠᴄ-ᴛᴏᴏʟs •", callback_data="TOOL_BACK HELP_14"),
-            InlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data=f"TOOL_BACK HELP_26"),
+            InlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data=f"MAIN_CP"),
             InlineKeyboardButton("• ᴡʜɪsᴘᴇʀ•", callback_data="TOOL_BACK HELP_02"),
         ]
     
@@ -66,14 +66,7 @@ class BUTTONS(object):
             InlineKeyboardButton("ϻᴜѕɪᴄ", callback_data="settings_back_helper"),
             InlineKeyboardButton("ϻᴧηᴧɢєϻєηᴛ", callback_data="TOOL_CP"),
         ],
-        [
-            InlineKeyboardButton("ηєᴡ ϻσᴅᴜʟєs", callback_data="MANAGEMENT_CP"),
-          #  InlineKeyboardButton("ᴏᴡηєʀ-sᴜᴅᴏ", callback_data="SUDO_BTN"),
-        ],
-        [
-            InlineKeyboardButton("ᴧʟʟ ʙσᴛ's", callback_data="MAIN_BACK HELP_ABOUT"),
-            InlineKeyboardButton("ᴘʀσϻσᴛɪση", callback_data="PROMOTION_CP"),
-        ],
+        
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
             
