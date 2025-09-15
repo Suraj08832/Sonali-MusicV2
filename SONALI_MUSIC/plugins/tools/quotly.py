@@ -266,13 +266,13 @@ async def msg_quotly_cmd(self: Client, ctx: Message):
             if check_arg[0]:
                 count = check_arg[1]
             else:
-                continue  # Ignore invalid arguments
+                continue 
 
     if count < 1 or count > 10:
         return await ctx.reply_text("Invalid range", delete_after=6)
     
-    # Send processing message
-    processing_msg = await ctx.reply_text("❄️")
+   
+    processing_msg = await ctx.reply_text("⚡")
     try:
         if count == 1:
             messages = [ctx.reply_to_message]
@@ -293,7 +293,7 @@ async def msg_quotly_cmd(self: Client, ctx: Message):
     try:
         make_quotly = await pyrogram_to_quotly(messages, is_reply=is_reply)
         bio_sticker = BytesIO(make_quotly)
-        bio_sticker.name = "misskatyquote_sticker.webp"
+        bio_sticker.name = "purviquote_sticker.webp"
         await ctx.reply_sticker(bio_sticker)
     except Exception as e:
         await ctx.reply_text(f"ERROR: {e}")
