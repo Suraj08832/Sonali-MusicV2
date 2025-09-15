@@ -23,7 +23,7 @@ stopProcess = False
                                
 # ------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command(["admins","staff"]))
+@app.on_message(filters.command(["admins","staff", "adminlist"]))
 async def admins(client, message):
   try: 
     adminList = []
