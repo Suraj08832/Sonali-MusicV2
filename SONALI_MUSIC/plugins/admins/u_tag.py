@@ -16,17 +16,22 @@ from SONALI_MUSIC import app
 
 spam_chats = set()
 
-
 @app.on_message(filters.command(["utag", "all", "mention"], prefixes=["/", "@"]))
 async def tag_all_users(client: Client, message: Message):
-    # Private chat check
+    
     if message.chat.type == enums.ChatType.PRIVATE:
         return await message.reply("⬤ **ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.**")
 
-    # Admin check
+    
     member = await client.get_chat_member(message.chat.id, message.from_user.id)
     if member.status not in [enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER]:
         return await message.reply("⬤ **ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ.**")
+
+   
+    try:
+        await message.delete()
+    except Exception:
+        pass
 
     replied = message.reply_to_message
     text = message.text.split(None, 1)[1] if len(message.command) > 1 else ""
@@ -36,6 +41,7 @@ async def tag_all_users(client: Client, message: Message):
 
     spam_chats.add(message.chat.id)
     usernum, usertxt, total_tagged = 0, "", 0
+
 
     try:
         async for member in client.get_chat_members(message.chat.id):
