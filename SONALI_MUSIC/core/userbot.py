@@ -7,14 +7,11 @@
 # =======================================================
 
 from pyrogram import Client
-
 import config
-
 from ..logging import LOGGER
 
 assistants = []
 assistantids = []
-
 
 class Userbot(Client):
     def __init__(self):
@@ -68,7 +65,7 @@ class Userbot(Client):
                 await self.one.send_message(config.LOGGER_ID, "❖ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
+                    "ᴀssɪsᴛᴀɴᴛ ᴀccᴏᴜɴᴛ 1 ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ. ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴀᴅᴅᴇᴅ ʏᴏᴜʀ ᴀssɪsᴛᴀɴᴛ ᴀs ᴀᴅᴍɪɴ!"
                 )
                 exit()
             self.one.id = self.one.me.id
@@ -89,7 +86,7 @@ class Userbot(Client):
                 await self.two.send_message(config.LOGGER_ID, "❖ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
+                    "ᴀssɪsᴛᴀɴᴛ ᴀccᴏᴜɴᴛ 2 ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ. ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴀᴅᴅᴇᴅ ʏᴏᴜʀ ᴀssɪsᴛᴀɴᴛ ᴀs ᴀᴅᴍɪɴ!"
                 )
                 exit()
             self.two.id = self.two.me.id
@@ -110,7 +107,7 @@ class Userbot(Client):
                 await self.three.send_message(config.LOGGER_ID, "❖ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 3 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
+                    "ᴀssɪsᴛᴀɴᴛ ᴀccᴏᴜɴᴛ 3 ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ!"
                 )
                 exit()
             self.three.id = self.three.me.id
@@ -131,7 +128,7 @@ class Userbot(Client):
                 await self.four.send_message(config.LOGGER_ID, "❖ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 4 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
+                    "ᴀssɪsᴛᴀɴᴛ ᴀccᴏᴜɴᴛ 4 ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ!"
                 )
                 exit()
             self.four.id = self.four.me.id
@@ -152,7 +149,7 @@ class Userbot(Client):
                 await self.five.send_message(config.LOGGER_ID, "❖ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 5 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
+                    "ᴀssɪsᴛᴀɴᴛ ᴀccᴏᴜɴᴛ 5 ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ!"
                 )
                 exit()
             self.five.id = self.five.me.id
@@ -175,7 +172,8 @@ class Userbot(Client):
             if config.STRING5:
                 await self.five.stop()
         except:
-            pass
+            pass    
+                
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
