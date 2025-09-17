@@ -7,7 +7,6 @@
 # =======================================================
 
 import os
-
 from ..logging import LOGGER
 
 
@@ -25,7 +24,7 @@ def dirr():
     if "cache" not in os.listdir():
         os.mkdir("cache")
 
-    LOGGER(__name__).info("Directories Updated.")
+    LOGGER(__name__).info("ᴅɪʀᴇᴄᴛᴏʀɪᴇs ᴜᴘᴅᴀᴛᴇᴅ.")
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
