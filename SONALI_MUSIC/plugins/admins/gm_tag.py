@@ -56,7 +56,8 @@ EMOJI = [ "🦋🦋🦋🦋🦋",
           " 🥬🍉🧁🧇",
         ]
 
-TAGMES = [ " **ɢᴏᴏᴅ ɴɪɢʜᴛ 🌚** ",
+PURVI_GN = [ 
+           " **ɢᴏᴏᴅ ɴɪɢʜᴛ 🌚** ",
            " **ᴄʜᴜᴘ ᴄʜᴀᴘ sᴏ ᴊᴀ 🙊** ",
            " **ᴘʜᴏɴᴇ ʀᴀᴋʜ ᴋᴀʀ sᴏ ᴊᴀ, ɴᴀʜɪ ᴛᴏ ʙʜᴏᴏᴛ ᴀᴀ ᴊᴀʏᴇɢᴀ..👻** ",
            " **ᴀᴡᴇᴇ ʙᴀʙᴜ sᴏɴᴀ ᴅɪɴ ᴍᴇɪɴ ᴋᴀʀ ʟᴇɴᴀ ᴀʙʜɪ sᴏ ᴊᴀᴏ..?? 🥲** ",
@@ -86,35 +87,56 @@ TAGMES = [ " **ɢᴏᴏᴅ ɴɪɢʜᴛ 🌚** ",
            " **ʙᴀʙʏ ᴀᴀᴊ ʀᴀᴀᴛ ᴋᴀ sᴄᴇɴᴇ ʙɴᴀ ʟᴇ 🥰** ",
            " **ɪᴛɴɪ ʀᴀᴀᴛ ᴍᴇ ᴊᴀɢ ᴋᴀʀ ᴋʏᴀ ᴋᴀʀ ʀʜᴇ ʜᴏ sᴏɴᴀ ɴᴀʜɪ ʜᴀɪ ᴋʏᴀ 😜** ",
            " **ᴄʟᴏsᴇ ʏᴏᴜʀ ᴇʏᴇs sɴᴜɢɢʟᴇ ᴜᴘ ᴛɪɢʜᴛ,, ᴀɴᴅ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ᴀɴɢᴇʟs, ᴡɪʟʟ ᴡᴀᴛᴄʜ ᴏᴠᴇʀ ʏᴏᴜ ᴛᴏɴɪɢʜᴛ... 💫** ",
-           ]
+]
 
-VC_TAG = [ "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ᴋᴇsᴇ ʜᴏ 🐱**",
-         "**ɢᴍ, sᴜʙʜᴀ ʜᴏ ɢʏɪ ᴜᴛʜɴᴀ ɴᴀʜɪ ʜᴀɪ ᴋʏᴀ 🌤️**",
-         "**ɢᴍ ʙᴀʙʏ, ᴄʜᴀɪ ᴘɪ ʟᴏ ☕**",
-         "**ᴊᴀʟᴅɪ ᴜᴛʜᴏ, sᴄʜᴏᴏʟ ɴᴀʜɪ ᴊᴀɴᴀ ᴋʏᴀ 🏫**",
-         "**ɢᴍ, ᴄʜᴜᴘ ᴄʜᴀᴘ ʙɪsᴛᴇʀ sᴇ ᴜᴛʜᴏ ᴠʀɴᴀ ᴘᴀɴɪ ᴅᴀʟ ᴅᴜɴɢɪ 🧊**",
-         "**ʙᴀʙʏ ᴜᴛʜᴏ ᴀᴜʀ ᴊᴀʟᴅɪ ғʀᴇsʜ ʜᴏ ᴊᴀᴏ, ɴᴀsᴛᴀ ʀᴇᴀᴅʏ ʜᴀɪ 🫕**",
-         "**ᴏғғɪᴄᴇ ɴᴀʜɪ ᴊᴀɴᴀ ᴋʏᴀ ᴊɪ ᴀᴀᴊ, ᴀʙʜɪ ᴛᴀᴋ ᴜᴛʜᴇ ɴᴀʜɪ 🏣**",
-         "**ɢᴍ ᴅᴏsᴛ, ᴄᴏғғᴇᴇ/ᴛᴇᴀ ᴋʏᴀ ʟᴏɢᴇ ☕🍵**",
-         "**ʙᴀʙʏ 8 ʙᴀᴊɴᴇ ᴡᴀʟᴇ ʜᴀɪ, ᴀᴜʀ ᴛᴜᴍ ᴀʙʜɪ ᴛᴋ ᴜᴛʜᴇ ɴᴀʜɪ 🕖**",
-         "**ᴋʜᴜᴍʙʜᴋᴀʀᴀɴ ᴋɪ ᴀᴜʟᴀᴅ ᴜᴛʜ ᴊᴀᴀ... ☃️**",
-         "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ʜᴀᴠᴇ ᴀ ɴɪᴄᴇ ᴅᴀʏ... 🌄**",
-         "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ʜᴀᴠᴇ ᴀ ɢᴏᴏᴅ ᴅᴀʏ... 🪴**",
-         "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ ʙᴀʙʏ 😇**",
-         "**ᴍᴜᴍᴍʏ ᴅᴇᴋʜᴏ ʏᴇ ɴᴀʟᴀʏᴋ ᴀʙʜɪ ᴛᴀᴋ sᴏ ʀʜᴀ ʜᴀɪ... 😵‍💫**",
-         "**ʀᴀᴀᴛ ʙʜᴀʀ ʙᴀʙᴜ sᴏɴᴀ ᴋʀ ʀʜᴇ ᴛʜᴇ ᴋʏᴀ, ᴊᴏ ᴀʙʜɪ ᴛᴋ sᴏ ʀʜᴇ ʜᴏ ᴜᴛʜɴᴀ ɴᴀʜɪ ʜᴀɪ ᴋʏᴀ... 😏**",
-         "**ʙᴀʙᴜ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴜᴛʜ ᴊᴀᴏ ᴀᴜʀ ɢʀᴏᴜᴘ ᴍᴇ sᴀʙ ғʀɪᴇɴᴅs ᴋᴏ ɢᴍ ᴡɪsʜ ᴋʀᴏ... 🌟**",
-         "**ᴘᴀᴘᴀ ʏᴇ ᴀʙʜɪ ᴛᴀᴋ ᴜᴛʜ ɴᴀʜɪ, sᴄʜᴏᴏʟ ᴋᴀ ᴛɪᴍᴇ ɴɪᴋᴀʟᴛᴀ ᴊᴀ ʀʜᴀ ʜᴀɪ... 🥲**",
-         "**ᴊᴀɴᴇᴍᴀɴ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ᴋʏᴀ ᴋʀ ʀʜᴇ ʜᴏ ... 😅**",
-         "**ɢᴍ ʙᴇᴀsᴛɪᴇ, ʙʀᴇᴀᴋғᴀsᴛ ʜᴜᴀ ᴋʏᴀ... 🍳**",
-        ]
 
+
+PURVI_GM = [
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ᴋᴇsᴇ ʜᴏ 🐱**",
+    "**ɢᴍ, sᴜʙʜᴀ ʜᴏ ɢʏɪ ᴜᴛʜɴᴀ ɴᴀʜɪ ʜᴀɪ ᴋʏᴀ 🌤️**",
+    "**ɢᴍ ʙᴀʙʏ, ᴄʜᴀɪ ᴘɪ ʟᴏ ☕**",
+    "**ᴊᴀʟᴅɪ ᴜᴛʜᴏ, sᴄʜᴏᴏʟ ɴᴀʜɪ ᴊᴀɴᴀ ᴋʏᴀ 🏫**",
+    "**ɢᴍ, ᴄʜᴜᴘ ᴄʜᴀᴘ ʙɪsᴛᴇʀ sᴇ ᴜᴛʜᴏ ᴠʀɴᴀ ᴘᴀɴɪ ᴅᴀʟ ᴅᴜɴɢɪ 🧊**",
+    "**ʙᴀʙʏ ᴜᴛʜᴏ ᴀᴜʀ ᴊᴀʟᴅɪ ғʀᴇsʜ ʜᴏ ᴊᴀᴏ, ɴᴀsᴛᴀ ʀᴇᴀᴅʏ ʜᴀɪ 🫕**",
+    "**ᴏғғɪᴄᴇ ɴᴀʜɪ ᴊᴀɴᴀ ᴋʏᴀ ᴊɪ ᴀᴀᴊ, ᴀʙʜɪ ᴛᴀᴋ ᴜᴛʜᴇ ɴᴀʜɪ 🏣**",
+    "**ɢᴍ ᴅᴏsᴛ, ᴄᴏғғᴇᴇ/ᴛᴇᴀ ᴋʏᴀ ʟᴏɢᴇ ☕🍵**",
+    "**ʙᴀʙʏ 8 ʙᴀᴊɴᴇ ᴡᴀʟᴇ ʜᴀɪ, ᴀᴜʀ ᴛᴜᴍ ᴀʙʜɪ ᴛᴋ ᴜᴛʜᴇ ɴᴀʜɪ 🕖**",
+    "**ᴋʜᴜᴍʙʜᴋᴀʀᴀɴ ᴋɪ ᴀᴜʟᴀᴅ ᴜᴛʜ ᴊᴀᴀ... ☃️**",
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ʜᴀᴠᴇ ᴀ ɴɪᴄᴇ ᴅᴀʏ... 🌄**",
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ʜᴀᴠᴇ ᴀ ɢᴏᴏᴅ ᴅᴀʏ... 🪴**",
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ ʙᴀʙʏ 😇**",
+    "**ᴍᴜᴍᴍʏ ᴅᴇᴋʜᴏ ʏᴇ ɴᴀʟᴀʏᴋ ᴀʙʜɪ ᴛᴀᴋ sᴏ ʀʜᴀ ʜᴀɪ... 😵‍💫**",
+    "**ʀᴀᴀᴛ ʙʜᴀʀ ʙᴀʙᴜ sᴏɴᴀ ᴋʀ ʀʜᴇ ᴛʜᴇ ᴋʏᴀ, ᴊᴏ ᴀʙʜɪ ᴛᴋ sᴏ ʀʜᴇ ʜᴏ ᴜᴛʜɴᴀ ɴᴀʜɪ ʜᴀɪ ᴋʏᴀ... 😏**",
+    "**ʙᴀʙᴜ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴜᴛʜ ᴊᴀᴏ ᴀᴜʀ ɢʀᴏᴜᴘ ᴍᴇ sᴀʙ ғʀɪᴇɴᴅs ᴋᴏ ɢᴍ ᴡɪsʜ ᴋʀᴏ... 🌟**",
+    "**ᴘᴀᴘᴀ ʏᴇ ᴀʙʜɪ ᴛᴀᴋ ᴜᴛʜ ɴᴀʜɪ, sᴄʜᴏᴏʟ ᴋᴀ ᴛɪᴍᴇ ɴɪᴋᴀʟᴛᴀ ᴊᴀ ʀʜᴀ ʜᴀɪ... 🥲**",
+    "**ᴊᴀɴᴇᴍᴀɴ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ᴋʏᴀ ᴋʀ ʀʜᴇ ʜᴏ ... 😅**",
+    "**ɢᴍ ʙᴇᴀsᴛɪᴇ, ʙʀᴇᴀᴋғᴀsᴛ ʜᴜᴀ ᴋʏᴀ... 🍳**",
+    # Extra new lines
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ᴀʙʜɪ ᴛᴋ ʙɪsᴛᴇʀ ᴘᴇ ʜɪ ᴘᴀᴅʼᴇ ʜᴏ 😴**",
+    "**ᴊᴀɢᴏ ʙʜᴀɪ ᴊᴀɢᴏ, ᴅᴇsʜ ᴋᴏ ᴛᴜᴍʜᴀʀɪ ᴢᴀʀᴜʀᴀᴛ ʜᴀɪ 🤓**",
+    "**ᴀʙʜɪ ᴛᴋ sᴏ ʀʜᴇ ʜᴏ ᴋʏᴀ, ᴍᴇʜɴᴛɪ ᴋᴀᴍᴀɴᴇ ɴᴀʜɪ ᴊᴀɴᴀ ᴋʏᴀ 💸**",
+    "**ʙᴀʙᴜ ʙɪsᴛᴇʀ sᴇ ᴜᴛʜ ᴊᴀᴏ, ɴᴀʜɪ ᴛᴏ ᴘʀᴏᴘᴇʀᴛʏ ᴘᴀᴘᴀ ᴋᴇ ɴᴀᴀᴍ ʜᴏ ᴊᴀʏᴇɢɪ 😏**",
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ᴋʏᴀ ᴀᴊ ᴘʜɪʀ ᴄʟᴀss ᴍᴇ ʟᴀᴛᴇ ʜᴏɢᴇ 😂**",
+    "**ᴜᴛʜᴏ ᴊɪ, ᴍᴏʙɪʟᴇ ᴄʜᴀʀɢᴇʀ ᴋʀᴛᴇ ʀʜᴏ ᴀᴜʀ ᴋʜᴜᴅ ʙᴀᴛᴛᴇʀʏ ᴋʜᴀᴛᴀᴍ ᴋᴀʀᴛᴇ ʀʜᴏ 🔋**",
+    "**ʙᴇᴛᴀ ᴊᴀɢᴏ, ɴᴀʜɪ ᴛᴏ ʙᴏss ɴᴏᴛɪᴄᴇ ʟɪᴋʜ ᴅᴇɢᴀ 📄**",
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ʙᴇʜᴇɴᴊɪ, ᴀᴊ ʙʜɪ ᴀʟᴀʀᴍ ᴋᴇ sᴀᴀᴛʜ ʟᴀᴅᴀɪ ʜᴀᴀʀ ɢʏᴇ 🛏️**",
+    "**ᴀʙʜɪ ᴜᴛʜᴏ ɴᴀʜɪ ᴛᴏ ᴍᴀᴍᴍɪ ᴋɪ ᴄʜᴀᴘᴘᴀʟ ᴜᴛʜ ᴊᴀʏᴇɢɪ 🩴**",
+    "**ᴊᴀɢ ᴊᴀᴀᴏ ᴅᴏsᴛ, ᴀᴊ ᴘʜɪʀ ᴏɴʟɪɴᴇ ᴄʟᴀss ᴍᴇ ᴄᴀᴍᴇʀᴀ ᴏғғ ᴋᴀʀ ᴋᴇ sᴏɴᴀ ʜᴀɪ ᴋʏᴀ 💻**",
+    "**ᴜᴛʜᴏ ᴊᴀɴᴇᴍᴀɴ, ᴘᴇᴛʜ ᴋᴇ ᴄʜᴀᴠᴀʟ ʙʜɪ ʙʜᴏᴏᴋʜᴇ ʜᴀɪ 🐕**",
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ʙᴀᴛʜʀᴏᴏᴍ ᴋɪ ʟɪɴᴇ ʟᴀɢ ɢʏɪ ʜᴀɪ 🚿**",
+    "**ʙᴀʙʏ, ᴊᴀʟᴅɪ ᴜᴛʜᴏ, ɴᴀʜɪ ᴛᴏ ʀᴏᴛɪ ʙʜɪ ᴛᴜᴍʜᴀʀɪ ᴛᴀʀᴀʜ ʜᴀʀᴅ ʜᴏ ᴊᴀʏᴇɢɪ 🍪**",
+    "**ᴊᴀɢᴏ ʙʀᴏ, ᴀᴊ ʙʜɪ ᴋᴏʟʜᴀᴘᴜʀɪ ᴄʜᴀᴘᴘᴀʟ ᴋᴇ sᴀᴡᴀᴀᴅ ᴀᴜʀ ᴀʟᴀʀᴍ ᴋᴇ ᴡᴀᴊᴀʜ sᴇ ᴜᴛʜᴇ ɴᴀ? 🩴⏰**",
+    "**ʙᴏʟᴏ ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ, ɴᴀʜɪ ᴛᴏ ᴍᴀᴍᴍɪ ᴋʜᴀɴᴀ ɴᴀʜɪ ᴅᴇɴɢɪ 🍲**",
+    "**ᴘʀɪɴᴄᴇss ᴜᴛʜᴏ, ʀᴀᴊᴋᴜᴍᴀʀ ʙᴀʜᴀʀ ʙᴇᴄʜᴀʀᴀ ɪɴᴛᴢᴀᴀʀ ᴋᴀʀ ʀʜᴀ ʜᴀɪ 👑**",
+    "**ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴘᴀɢʟᴇ, ᴊᴀᴀɴ ᴜᴛʜ ɢʏɪ ᴛᴏ ᴛᴜᴍʜᴀʀᴀ ᴍᴏᴏᴅ ʙʜɪ ᴏɴ ʜᴏ ᴊᴀʏᴇɢᴀ 😜**",
+    "**ᴅᴏsᴛ ᴀᴊ ᴅɪɴ ʙʜᴀʀ ᴏɴʟʏ ᴏɴʟɪɴᴇ ᴄʜᴀᴛ ᴋᴀʀɴᴀ ʜᴀɪ ᴋʏᴀ, ᴘᴇʜʟᴇ ᴜᴛʜᴏ ᴛᴏ sᴀʜɪ 😏**",
+]
 
 @app.on_message(filters.command(["gntag"], prefixes=["/", "@", "#"]))
 async def mentionall(client, message):
     chat_id = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply("⬤ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.")
+        return await message.reply("**⬤ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.**")
 
     is_admin = False
     try:
@@ -128,10 +150,10 @@ async def mentionall(client, message):
         ):
             is_admin = True
     if not is_admin:
-        return await message.reply("⬤ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs. ")
+        return await message.reply("**⬤ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs.**")
 
     if message.reply_to_message and message.text:
-        return await message.reply("⬤ /gntag ɢᴏᴏᴅ ɴɪɢʜᴛ ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs / ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ ʙᴏᴛ ᴛᴀɢɢɪɴɢ...")
+        return await message.reply("**⬤ /gntag ɢᴏᴏᴅ ɴɪɢʜᴛ ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs / ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ ʙᴏᴛ ᴛᴀɢɢɪɴɢ...**")
     elif message.text:
         mode = "text_on_cmd"
         msg = message.text
@@ -139,11 +161,11 @@ async def mentionall(client, message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         if not msg:
-            return await message.reply("⬤ /gntag ɢᴏᴏᴅ ɴɪɢʜᴛ ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs / ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ ғᴏᴛ ᴛᴀɢɢɪɴɢ...")
+            return await message.reply("**⬤ /gntag ɢᴏᴏᴅ ɴɪɢʜᴛ ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs / ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ ғᴏᴛ ᴛᴀɢɢɪɴɢ...**")
     else:
-        return await message.reply("⬤ /gmtag ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs / ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ ʙᴏᴛ ᴛᴀɢɢɪɴɢ...")
+        return await message.reply("**⬤ /gmtag ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs / ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ɴᴇxᴛ ᴛɪᴍᴇ ʙᴏᴛ ᴛᴀɢɢɪɴɢ...**")
     if chat_id in spam_chats:
-        return await message.reply("⬤ ᴘʟᴇᴀsᴇ ᴀᴛ ғɪʀsᴛ sᴛᴏᴘ ʀᴜɴɴɪɴɢ ᴍᴇɴᴛɪᴏɴ ᴘʀᴏᴄᴇss...")
+        return await message.reply("**⬤ ᴘʟᴇᴀsᴇ ᴀᴛ ғɪʀsᴛ sᴛᴏᴘ ʀᴜɴɴɪɴɢ ᴍᴇɴᴛɪᴏɴ ᴘʀᴏᴄᴇss...")
     spam_chats.append(chat_id)
     usrnum = 0
     usrtxt = ""
@@ -157,7 +179,7 @@ async def mentionall(client, message):
 
         if usrnum == 1:
             if mode == "text_on_cmd":
-                txt = f"{usrtxt} {random.choice(TAGMES)}"
+                txt = f"{usrtxt} {random.choice(PURVI_GN)}"
                 await client.send_message(chat_id, txt)
             elif mode == "text_on_reply":
                 await msg.reply(f"[{random.choice(EMOJI)}](tg://user?id={usr.user.id})")
@@ -174,7 +196,7 @@ async def mentionall(client, message):
 async def mention_allvc(client, message):
     chat_id = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply("⬤ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.")
+        return await message.reply("**⬤ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.**")
 
     is_admin = False
     try:
@@ -188,9 +210,9 @@ async def mention_allvc(client, message):
         ):
             is_admin = True
     if not is_admin:
-        return await message.reply("⬤ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs. ")
+        return await message.reply("**⬤ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs.**")
     if chat_id in spam_chats:
-        return await message.reply("⬤ ᴘʟᴇᴀsᴇ ᴀᴛ ғɪʀsᴛ sᴛᴏᴘ ʀᴜɴɴɪɴɢ ᴍᴇɴᴛɪᴏɴ ᴘʀᴏᴄᴇss...")
+        return await message.reply("**⬤ ᴘʟᴇᴀsᴇ ᴀᴛ ғɪʀsᴛ sᴛᴏᴘ ʀᴜɴɴɪɴɢ ᴍᴇɴᴛɪᴏɴ ᴘʀᴏᴄᴇss...**")
     spam_chats.append(chat_id)
     usrnum = 0
     usrtxt = ""
@@ -203,7 +225,7 @@ async def mention_allvc(client, message):
         usrtxt += f"[{usr.user.first_name}](tg://user?id={usr.user.id}) "
 
         if usrnum == 1:
-            txt = f"{usrtxt} {random.choice(VC_TAG)}"
+            txt = f"{usrtxt} {random.choice(PURVI_GM)}"
             await client.send_message(chat_id, txt)
             await asyncio.sleep(4)
             usrnum = 0
@@ -218,7 +240,7 @@ async def mention_allvc(client, message):
 @app.on_message(filters.command(["gmstop", "gnstop"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
-        return await message.reply("⬤ ᴄᴜʀʀᴇɴᴛʟʏ ɪ'ᴍ ɴᴏᴛ ᴛᴀɢɢɪɴɢ ʙᴀʙʏ.")
+        return await message.reply("**⬤ ᴄᴜʀʀᴇɴᴛʟʏ ɪ'ᴍ ɴᴏᴛ ᴛᴀɢɢɪɴɢ ʙᴀʙʏ.**")
     is_admin = False
     try:
         participant = await client.get_chat_member(message.chat.id, message.from_user.id)
@@ -231,13 +253,13 @@ async def cancel_spam(client, message):
         ):
             is_admin = True
     if not is_admin:
-        return await message.reply("⬤ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs.")
+        return await message.reply("**⬤ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs.**")
     else:
         try:
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.reply("♥︎ ᴛᴀɢ sᴛᴏᴘᴘᴇᴅ.")
+        return await message.reply("**♥︎ ᴛᴀɢ sᴛᴏᴘᴘᴇᴅ.**")
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
