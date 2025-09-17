@@ -17,16 +17,9 @@ db = mongo.SONALI_MUSIC
 
 coupledb = db.couple
 
-impdb = db.pretender
-
 afkdb = db.afk
 
-nightmodedb = db.nightmode
-
 notesdb = db.notes
-
-filtersdb = db.filters
-
 
 async def _get_lovers(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
