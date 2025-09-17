@@ -1,22 +1,19 @@
 # =======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
-
 # This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
- 
 # 📩 DM for permission : @TheSigmaCoder
 # =======================================================
 
 from pyrogram import Client, errors
-from pyrogram.enums import ChatMemberStatus, ParseMode
+from pyrogram.enums import ChatMemberStatus
 
 import config
-
 from ..logging import LOGGER
 
 
 class Sona(Client):
     def __init__(self):
-        LOGGER(__name__).info(f"sᴛʀᴀᴛɪɴɢ ʙᴏᴛ...")
+        LOGGER(__name__).info("sᴛʀᴀᴛɪɴɢ ʙᴏᴛ...")
         super().__init__(
             name="SONALI_MUSIC",
             api_id=config.API_ID,
@@ -36,25 +33,31 @@ class Sona(Client):
         try:
             await self.send_message(
                 chat_id=config.LOGGER_ID,
-                text=f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :-</b><u>\n\nɪᴅ :- <code>{self.id}</code>\nɴᴀᴍᴇ :- {self.name}\nᴜsᴇʀɴᴀᴍᴇ :- @{self.username}",
+                text=(
+                    f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :-</b></u>\n\n"
+                    f"ɪᴅ :- <code>{self.id}</code>\n"
+                    f"ɴᴀᴍᴇ :- {self.name}\n"
+                    f"ᴜsᴇʀɴᴀᴍᴇ :- @{self.username}"
+                ),
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(__name__).error(
-                "Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel."
+                "ʙᴏᴛ ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ. ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴅᴇᴅ ᴛʜᴇʀᴇ."
             )
             exit()
         except Exception as ex:
             LOGGER(__name__).error(
-                f"Bot has failed to access the log group/channel.\n  Reason : {type(ex).__name__}."
+                f"ʙᴏᴛ ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.\n  ʀᴇᴀsᴏɴ : {type(ex).__name__}."
             )
             exit()
 
         a = await self.get_chat_member(config.LOGGER_ID, self.id)
         if a.status != ChatMemberStatus.ADMINISTRATOR:
             LOGGER(__name__).error(
-                "Please promote your bot as an admin in your log group/channel."
+                "ᴘʟᴇᴀsᴇ ᴘʀᴏᴍᴏᴛᴇ ʏᴏᴜʀ ʙᴏᴛ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ."
             )
             exit()
+
         LOGGER(__name__).info(f"ᴍᴜsɪᴄ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ ᴀs {self.name}")
 
     async def stop(self):
@@ -62,7 +65,6 @@ class Sona(Client):
 
 # ======================================================
 # ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
-
 # 🧑‍💻 Developer : t.me/TheSigmaCoder
 # 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
 # 📢 Telegram channel : t.me/Purvi_Bots
