@@ -5,7 +5,7 @@
 # =======================================================
 
 from pyrogram import Client, errors
-from pyrogram.enums import ChatMemberStatus
+from pyrogram.enums import ChatMemberStatus, ParseMode
 
 import config
 from ..logging import LOGGER
@@ -13,7 +13,7 @@ from ..logging import LOGGER
 
 class Sona(Client):
     def __init__(self):
-        LOGGER(__name__).info("sᴛʀᴀᴛɪɴɢ ʙᴏᴛ...")
+        LOGGER(__name__).info(f"sᴛʀᴀᴛɪɴɢ ʙᴏᴛ...")
         super().__init__(
             name="SONALI_MUSIC",
             api_id=config.API_ID,
@@ -47,7 +47,7 @@ class Sona(Client):
             exit()
         except Exception as ex:
             LOGGER(__name__).error(
-                f"ʙᴏᴛ ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.\n  ʀᴇᴀsᴏɴ : {type(ex).__name__}."
+                f"ʙᴏᴛ ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.\n  ʀᴇᴀsᴏɴ :- {type(ex).__name__}."
             )
             exit()
 
