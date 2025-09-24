@@ -131,7 +131,7 @@ async def seek_forward_20_cb(client, callback_query: CallbackQuery):
 
         if (duration_seconds - (duration_played + duration_to_skip)) <= 10:
             return await callback_query.answer(
-                f"⛔ ᴛᴏᴏ ᴄʟᴏsᴇ ᴛᴏ ᴛʜᴇ ᴇɴᴅ.\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(duration_played)} / {duration_str}",
+                f"⛔ ᴛᴏᴏ ᴄʟᴏsᴇ ᴛᴏ ᴛʜᴇ ᴇɴᴅ.\n\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(duration_played)} / {duration_str}",
                 show_alert=True
             )
 
@@ -156,7 +156,7 @@ async def seek_forward_20_cb(client, callback_query: CallbackQuery):
 
         db[chat_id][0]["played"] += duration_to_skip
         await callback_query.answer(
-            f"✅ sᴛʀᴇᴀᴍ sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴇᴋᴇᴅ → 20 sᴇᴄs!\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(db[chat_id][0]['played'])} / {duration_str}",
+            f"✅ sᴛʀᴇᴀᴍ sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴇᴋᴇᴅ → 20 sᴇᴄs!\n\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(db[chat_id][0]['played'])} / {duration_str}",
             show_alert=True
         )
 
@@ -187,7 +187,7 @@ async def seek_backward_20_cb(client, callback_query: CallbackQuery):
 
         if (duration_played - duration_to_skip) <= 10:
             return await callback_query.answer(
-                f"⛔ ᴛᴏᴏ ᴄʟᴏsᴇ ᴛᴏ ᴛʜᴇ sᴛᴀʀᴛ.\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(duration_played)} / {duration_str}",
+                f"⛔ ᴛᴏᴏ ᴄʟᴏsᴇ ᴛᴏ ᴛʜᴇ sᴛᴀʀᴛ.\n\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(duration_played)} / {duration_str}",
                 show_alert=True
             )
 
@@ -212,7 +212,7 @@ async def seek_backward_20_cb(client, callback_query: CallbackQuery):
 
         db[chat_id][0]["played"] -= duration_to_skip
         await callback_query.answer(
-            f"✅ sᴛʀᴇᴀᴍ sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴇᴋᴇᴅ ʙᴀᴄᴋ → 20 sᴇᴄs!\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(db[chat_id][0]['played'])} / {duration_str}",
+            f"✅ sᴛʀᴇᴀᴍ sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴇᴋᴇᴅ ʙᴀᴄᴋ → 20 sᴇᴄs!\n\n▶️ ᴘʟᴀʏᴇᴅ : {seconds_to_min(db[chat_id][0]['played'])} / {duration_str}",
             show_alert=True
         )
 
