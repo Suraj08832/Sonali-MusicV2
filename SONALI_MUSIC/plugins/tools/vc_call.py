@@ -16,8 +16,8 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pyrogram.raw import functions
 
-from PURVIMUSIC import app
-from PURVIMUSIC.utils.database import get_assistant
+from SONALI_MUSIC import app
+from SONALI_MUSIC.utils.database import get_assistant
 
 LOGGER = getLogger(__name__)
 
