@@ -13,7 +13,7 @@
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "24168862",
         "required": true
       },
       "API_HASH": {
@@ -23,7 +23,7 @@
       },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
-        "value": "",
+        "value": "916a9424dd1e58ab7955001ccc0172b3",
         "required": true
       },
       "MONGO_DB_URI": {
@@ -33,7 +33,7 @@
       },
       "OWNER_ID": {
         "description": "Go @MissRose_Bot And type /id and get The user id of user whom you would like to add as OWNER.",
-        "value": "",
+        "value": "7473021518",
         "required": true
       },
       "STRING_SESSION": {
@@ -53,7 +53,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "",
+        "value": "-1002141133985",
         "required": true
       }
     },
