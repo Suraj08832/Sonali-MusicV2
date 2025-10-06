@@ -18,12 +18,12 @@
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "916a9424dd1e58ab7955001ccc0172b3",
         "required": true
       },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
-        "value": "916a9424dd1e58ab7955001ccc0172b3",
+        "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
