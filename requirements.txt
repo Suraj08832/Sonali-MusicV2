@@ -3,7 +3,6 @@ bard
 SpeechRecognition
 aiohttp 
 asyncio
-deepai
 python-whois
 dnspython
 ffmpeg-python
@@ -42,15 +41,12 @@ youtube-search
 youtube-search-python
 gtts
 git+https://github.com/AsmSafone/SafoneAPI
-lexica-api==1.5.1
 httpx
 gpytranslate
-openai==0.28.0
 pickledb
 python-telegram-bot
 pycryptodome
 opencv-python
-bing-image-urls
-bing_image_downloader
 googlesearch-python
 sympy
+PyGithub
