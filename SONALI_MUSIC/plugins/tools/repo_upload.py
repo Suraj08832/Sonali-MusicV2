@@ -6,15 +6,13 @@ import time
 from pyrogram import filters
 from SONALI_MUSIC import app
 from github import Github
-from config import OWNER_ID  # Owner ID import karo apne config se
+from config import OWNER_ID  
 
 TEMP_DIR = "temp_repos"
 os.makedirs(TEMP_DIR, exist_ok=True)
 
-# Temporary config storage
 TEMP_CONFIG = {}
 
-# Helper functions
 def run(cmd, cwd):
     proc = subprocess.run(cmd, cwd=cwd, text=True, capture_output=True)
     if proc.returncode != 0:
@@ -31,7 +29,6 @@ def safe_rm(path):
         pass
 
 def config_valid():
-    """Check if config exists and is not expired (5 minutes)"""
     if not TEMP_CONFIG:
         return False
     if time.time() - TEMP_CONFIG.get("timestamp", 0) > 300:
@@ -39,50 +36,44 @@ def config_valid():
         return False
     return True
 
-# ------------------ /gitconfig ------------------
+
 @app.on_message(filters.command("gitconfig") & filters.user(OWNER_ID))
 async def gitconfig(client, message):
     if len(message.command) < 4:
         return await message.reply(
-            "ᴜsᴀɢᴇ: `/gitconfig username email token`"
+            "**» ᴜsᴀɢᴇ :-** `/gitconfig username email token`"
         )
     name = message.command[1]
     email = message.command[2]
     token = message.command[3]
     TEMP_CONFIG.update({"name": name, "email": email, "token": token, "timestamp": time.time()})
-    await message.reply("✅ ɢɪᴛʜᴜʙ ᴄᴏɴꜰɪɢ sᴇᴛ sᴜᴄᴄᴇssғᴜʟʟʏ! (ᴠᴀʟɪᴅ ꜰᴏʀ 5 ᴍɪɴᴜᴛᴇs)")
+    await message.reply("✅ **ɢɪᴛʜᴜʙ ᴄᴏɴꜰɪɢ sᴇᴛ sᴜᴄᴄᴇssғᴜʟʟʏ!** (ᴠᴀʟɪᴅ ꜰᴏʀ **5 ᴍɪɴᴜᴛᴇs**)")
 
-# ------------------ /gitupload ------------------
+
 @app.on_message(filters.command(["gitupload", "gt"]) & filters.user(OWNER_ID))
 async def gitupload(client, message):
-    # 1️⃣ Usage check
     if len(message.command) < 2:
         return await message.reply(
-            "ᴜsᴀɢᴇ: `/gitupload repo_name private/public branch_name` (ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴢɪᴘ ғɪʟᴇ)`"
+            "**» ᴜsᴀɢᴇ :-** `/gitupload repo_name private/public branch_name` **(ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴢɪᴘ ғɪʟᴇ)**"
         )
 
-    # 2️⃣ Config check
     if not config_valid():
-        return await message.reply("⚠️ ᴄᴏɴꜰɪɢ ᴇxᴘɪʀᴇᴅ ᴏʀ ɴᴏᴛ sᴇᴛ! ᴘʟᴇᴀsᴇ ʀᴜɴ `/gitconfig` ғɪʀsᴛ.")
+        return await message.reply("**⚠️ ᴄᴏɴꜰɪɢ ᴇxᴘɪʀᴇᴅ ᴏʀ ɴᴏᴛ sᴇᴛ!**\n\n**» ᴘʟᴇᴀsᴇ ʀᴜɴ** `/gitconfig` **ғɪʀsᴛ.**")
 
-    # 3️⃣ Assign GitHub config variables
     GITHUB_NAME = TEMP_CONFIG["name"]
     GITHUB_EMAIL = TEMP_CONFIG["email"]
     GITHUB_TOKEN = TEMP_CONFIG["token"]
     g = Github(GITHUB_TOKEN)
 
-    # 4️⃣ Repo info
     repo_name = message.command[1]
     visibility = message.command[2].lower() if len(message.command) >= 3 else "public"
     is_private = visibility == "private"
     branch_name = message.command[3] if len(message.command) >= 4 else "main"
 
-    # 5️⃣ Reply check
     replied = message.reply_to_message
     if not (replied and replied.document and replied.document.file_name.endswith(".zip")):
         return await message.reply("⚠️ ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀ **ᴢɪᴘ** ғɪʟᴇ!")
 
-    # 6️⃣ Paths
     zip_path = os.path.join(TEMP_DIR, replied.document.file_name)
     extract_root = os.path.join(TEMP_DIR, f"{repo_name}_extract")
     final_path = os.path.join(TEMP_DIR, f"{repo_name}_final")
@@ -92,15 +83,13 @@ async def gitupload(client, message):
     safe_rm(final_path)
 
 
-    status = await message.reply("⏳ ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇqᴜᴇsᴛ...")
+    status = await message.reply("**⏳ ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇqᴜᴇsᴛ...**")
 
     try:
-        # Download and extract zip
         await replied.download(file_name=zip_path)
         with zipfile.ZipFile(zip_path, "r") as zip_ref:
             zip_ref.extractall(extract_root)
 
-        # Handle nested folder
         inner_items = os.listdir(extract_root)
         inner_dirs = [d for d in inner_items if os.path.isdir(os.path.join(extract_root, d))]
         inner_files = [f for f in inner_items if os.path.isfile(os.path.join(extract_root, f))]
@@ -110,16 +99,14 @@ async def gitupload(client, message):
         else:
             shutil.move(extract_root, final_path)
 
-        # Remove existing .git folder
         for root, dirs, _ in os.walk(final_path):
             if ".git" in dirs:
                 safe_rm(os.path.join(root, ".git"))
 
-        # Create GitHub repo
         user = g.get_user()
-        repo = user.create_repo(repo_name, private=is_private, description="Soon...", auto_init=False)
+        repo = user.create_repo(repo_name, private=is_private, description="🎉 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴜᴘʟᴏᴀᴅ ʙʏ :- ᴘᴜʀᴠɪ ʙᴏᴛs 🌺", auto_init=False)
 
-        # Git commands
+        
         run(["git", "init"], cwd=final_path)
         run(["git", "config", "user.email", GITHUB_EMAIL], cwd=final_path)
         run(["git", "config", "user.name", GITHUB_NAME], cwd=final_path)
@@ -141,7 +128,7 @@ async def gitupload(client, message):
         safe_rm(extract_root)
         safe_rm(final_path)
         await status.delete()
-        return await message.reply(f"❌ ᴇʀʀᴏʀ: `{e}`")
+        return await message.reply(f"❌** ᴇʀʀᴏʀ :-** `{e}`")
 
     # Cleanup
     safe_rm(zip_path)
@@ -149,8 +136,8 @@ async def gitupload(client, message):
     safe_rm(final_path)
     await status.delete()
     await message.reply(
-        f"✅ ʀᴇᴘᴏ **{repo_name}** ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!\n\n"
-        f"🔒 ᴠɪsɪʙɪʟɪᴛʏ: `{'Private' if is_private else 'Public'}`\n"
-        f"🌿 ʙʀᴀɴᴄʜ: `{branch_name}`\n\n"
-        f"🔗 ᴜʀʟ: {repo.html_url}"
+        f"✅ **ʀᴇᴘᴏ** `{repo_name}` ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!**\n\n"
+        f"🔒 **ᴠɪsɪʙɪʟɪᴛʏ :-** `{'Private' if is_private else 'Public'}`\n"
+        f"🌿 **ʙʀᴀɴᴄʜ :-** `{branch_name}`\n\n"
+        f"🔗 **ᴜʀʟ :-** {repo.html_url}"
     )
