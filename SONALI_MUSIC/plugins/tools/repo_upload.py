@@ -136,7 +136,7 @@ async def gitupload(client, message):
     safe_rm(final_path)
     await status.delete()
     await message.reply(
-        f"✅ **ʀᴇᴘᴏ** `{repo_name}` ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!**\n\n"
+        f"✅ **ʀᴇᴘᴏ** `{repo_name}` **ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!**\n\n"
         f"🔒 **ᴠɪsɪʙɪʟɪᴛʏ :-** `{'Private' if is_private else 'Public'}`\n"
         f"🌿 **ʙʀᴀɴᴄʜ :-** `{branch_name}`\n\n"
         f"🔗 **ᴜʀʟ :-** {repo.html_url}"
