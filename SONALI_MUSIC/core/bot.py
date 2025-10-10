@@ -34,7 +34,7 @@ class Sona(Client):
             await self.send_message(
                 chat_id=config.LOGGER_ID,
                 text=(
-                    f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :-</b></u>\n\n"
+                    f"<u><b>» {self.mention}</u> ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :-</b>\n\n"
                     f"ɪᴅ :- <code>{self.id}</code>\n"
                     f"ɴᴀᴍᴇ :- {self.name}\n"
                     f"ᴜsᴇʀɴᴀᴍᴇ :- @{self.username}"
