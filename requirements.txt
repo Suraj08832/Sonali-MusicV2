@@ -1,7 +1,7 @@
 aiofiles
 bard
 SpeechRecognition
-aiohttp 
+aiohttp
 asyncio
 python-whois
 dnspython
@@ -13,7 +13,7 @@ pydub
 pycountry
 heroku3
 apscheduler
-motor 
+motor
 numpy
 pillow==9.5.0
 psutil
@@ -41,7 +41,7 @@ youtube-search
 youtube-search-python
 gtts
 git+https://github.com/AsmSafone/SafoneAPI
-httpx
+httpx[http2]
 gpytranslate
 pickledb
 python-telegram-bot
