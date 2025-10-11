@@ -134,15 +134,15 @@ async def get_thumb(videoid: str):
         draw.text((text_x, title_y), short_title, (255, 255, 255), font=title_font)
 
         info_text = f"{short_channel} • {views}"
-        info_font = ImageFont.truetype("SONALI_MUSIC/assets/font2.ttf", 22)
+        info_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
         draw.text((text_x, info_y), info_text, (200, 200, 200), font=info_font)
 
-        time_font = ImageFont.truetype("SONALI_MUSIC/assets/font2.ttf", 26)
+        time_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 26)
         duration_text = duration if ":" in duration else f"00:{duration.zfill(2)}"
         time_display = f"00:00 / {duration_text}"
         draw.text((text_x, time_y), time_display, (200, 200, 200), font=time_font)
 
-        watermark_font = ImageFont.truetype("SONALI_MUSIC/assets/font2.ttf", 24)
+        watermark_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 24)
         watermark_text = "@Purvi_Bots"
 
         if hasattr(draw, "textbbox"): 
