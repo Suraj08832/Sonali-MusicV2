@@ -121,7 +121,7 @@ async def get_thumb(videoid: str):
         text_x = thumb_x + thumb_size + 30
         title_y = thumb_y + 10
         info_y = title_y + int(thumb_size * 0.33)
-        duration_y = info_y + int(thumb_size * 0.28)
+        duration_y = info_y + int(thumb_size * 0.28) - 10  # MOVED UP BY 10 PIXELS
         icons_y = duration_y + 40  
 
         def truncate_text(text, max_chars=30):
