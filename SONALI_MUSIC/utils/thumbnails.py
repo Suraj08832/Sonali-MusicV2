@@ -142,6 +142,7 @@ async def get_thumb(videoid: str):
 
         # Duration bar + text
         duration_text = duration if ":" in duration else f"00:{duration.zfill(2)}"
+        
         # Progress bar
         bar_length = 260
         bar_height = 5
@@ -151,9 +152,10 @@ async def get_thumb(videoid: str):
         draw.line([(bar_x, bar_y), (bar_x + bar_length // 3, bar_y)], fill="red", width=bar_height)
         # Circle on progress
         draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
-        # Duration text
+        
+        # Duration text - UPDATED POSITION (below progress bar)
         draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
-        draw.text((bar_x + bar_length - 80, bar_y + 10), f"ㅤ{duration_text}", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x + bar_length - 40, bar_y + 10), f"{duration_text}", fill=(200,200,200), font=duration_font)
 
         # Play icons
         icons_path = "SONALI_MUSIC/assets/play_icons.png"
@@ -206,15 +208,3 @@ async def get_thumb(videoid: str):
 # 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
 # 📢 Telegram channel : t.me/Purvi_Bots
 # =======================================================
-
-
-
-
-
-
-
-
-
-        
-        
-        
