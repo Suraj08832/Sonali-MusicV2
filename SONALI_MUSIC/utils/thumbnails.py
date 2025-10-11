@@ -133,7 +133,7 @@ async def get_thumb(videoid: str):
         # Fonts
         title_font = fit_text(draw, short_title, 600, font_path, 42, 28)
         info_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
-        duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 26)
+        duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
 
         # Draw title and channel info
         draw.text((text_x, title_y), short_title, (255, 255, 255), font=title_font)
