@@ -122,7 +122,7 @@ async def get_thumb(videoid: str):
         title_y = thumb_y + 10
         info_y = title_y + int(thumb_size * 0.33)
         duration_y = info_y + int(thumb_size * 0.28)
-        icons_y = duration_y + 40  # play icons below duration
+        icons_y = duration_y + 40  
 
         def truncate_text(text, max_chars=30):
             return (text[:max_chars - 3] + "...") if len(text) > max_chars else text
@@ -153,14 +153,14 @@ async def get_thumb(videoid: str):
         draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
         # Duration text
         draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
-        draw.text((bar_x + bar_length - 80, bar_y + 10), f"00:00 / {duration_text} 🎵", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x + bar_length - 80, bar_y + 10), f"{duration_text} 🎵", fill=(200,200,200), font=duration_font)
 
         # Play icons
         icons_path = "SONALI_MUSIC/assets/play_icons.png"
         if os.path.isfile(icons_path):
             icons_img = Image.open(icons_path).convert("RGBA")
             icons_w, icons_h = icons_img.size
-            scale_factor = 0.6  # scale down
+            scale_factor = 0.4
             new_size = (int(icons_w*scale_factor), int(icons_h*scale_factor))
             icons_img = icons_img.resize(new_size, Image.LANCZOS)
             icons_x = text_x
