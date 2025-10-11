@@ -53,11 +53,6 @@ def get_overlay_content_box(overlay_img: Image.Image) -> tuple:
     return binary.getbbox()
 
 
-def add_white_border(image, border_width=8):
-    """Add white border around the image"""
-    return ImageOps.expand(image, border=border_width, fill='white')
-
-
 async def get_thumb(videoid: str):
     url = f"https://www.youtube.com/watch?v={videoid}"
     try:
@@ -102,14 +97,18 @@ async def get_thumb(videoid: str):
         draw = ImageDraw.Draw(background)
         font_path = "SONALI_MUSIC/assets/font3.ttf"
 
-        # Player overlay with white border
-        player = Image.open("SONALI_MUSIC/assets/sona.png").convert("RGBA").resize((1280, 720))
+        # Create white border effect for player overlay
+        border_size = 6
+        player_original = Image.open("SONALI_MUSIC/assets/sona.png").convert("RGBA").resize((1280, 720))
         
-        # Add white border to the player overlay
-        player_with_border = add_white_border(player, border_width=6)
+        # Create a slightly larger white background
+        white_bg = Image.new("RGBA", (1280 + border_size*2, 720 + border_size*2), (255, 255, 255, 255))
         
-        # Resize back to original size after adding border
-        player_with_border = player_with_border.resize((1280, 720), Image.LANCZOS)
+        # Paste the player on white background
+        white_bg.paste(player_original, (border_size, border_size), player_original)
+        
+        # Resize back to original size
+        player_with_border = white_bg.resize((1280, 720), Image.LANCZOS)
         
         overlay_box = get_overlay_content_box(player_with_border) 
         content_x1, content_y1, content_x2, content_y2 = overlay_box
@@ -129,11 +128,11 @@ async def get_thumb(videoid: str):
         thumb_square.putalpha(mask)
         background.paste(thumb_square, (thumb_x, thumb_y), thumb_square)
 
-        # Text positions
+        # Text positions (ORIGINAL POSITIONS - NO CHANGES)
         text_x = thumb_x + thumb_size + 30
         title_y = thumb_y + 10
         info_y = title_y + int(thumb_size * 0.33)
-        duration_y = info_y + int(thumb_size * 0.28) - 10
+        duration_y = info_y + int(thumb_size * 0.28)
         icons_y = duration_y + 40  
 
         def truncate_text(text, max_chars=30):
@@ -165,7 +164,7 @@ async def get_thumb(videoid: str):
         # Circle on progress
         draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
         
-        # Duration text - UPDATED POSITION (below progress bar)
+        # Duration text - ORIGINAL POSITION
         draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
         draw.text((bar_x + bar_length - 40, bar_y + 10), f"{duration_text}", fill=(200,200,200), font=duration_font)
 
