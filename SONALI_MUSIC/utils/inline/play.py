@@ -77,7 +77,7 @@ def stream_markup_timer(_, chat_id, played, dur):
         ],
          [
              InlineKeyboardButton(text="< - 𝟤𝟢ˢ", callback_data="seek_backward_20"),
-             InlineKeyboardButton(text="• ᴏᴡɴᴇʀ •", url=f"https://raushan-seven.vercel.app"),
+             InlineKeyboardButton(text="• ᴘʀᴏᴍᴏ •", url=f"https://t.me/m/FFljyYI6NmE9"),
              InlineKeyboardButton(text="𝟤𝟢ˢ + >", callback_data="seek_forward_20")
          ],
         [
@@ -98,7 +98,7 @@ def stream_markup(_, chat_id):
          ],
         [
              InlineKeyboardButton(text="< - 𝟤𝟢ˢ", callback_data="seek_backward_20"),
-             InlineKeyboardButton(text="• ᴏᴡɴᴇʀ •", url=f"https://raushan-seven.vercel.app"),
+             InlineKeyboardButton(text="• ᴘʀᴏᴍᴏ •", url=f"https://t.me/m/FFljyYI6NmE9"),
              InlineKeyboardButton(text="𝟤𝟢ˢ + >", callback_data="seek_forward_20")
          ],
         [
