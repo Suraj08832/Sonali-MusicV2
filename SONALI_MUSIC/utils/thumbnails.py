@@ -1,17 +1,39 @@
+# =======================================================
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+
+# This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
+ 
+# 📩 DM for permission : @TheSigmaCoder
+# =======================================================
+
 import os
 import re
 import random
 import aiohttp
 import aiofiles
 import traceback
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 from youtubesearchpython.__future__ import VideosSearch
 from config import TELEGRAM_AUDIO_URL
+
 
 def changeImageSize(maxWidth, maxHeight, image):
     ratio = min(maxWidth / image.size[0], maxHeight / image.size[1])
     newSize = (int(image.size[0] * ratio), int(image.size[1] * ratio))
-    return image.resize(newSize, Image.LANCZOS)
+    return image.resize(newSize, Image.LANCZOS)  
+
+
+def truncate(text, max_chars=50):
+    words = text.split()
+    text1, text2 = "", ""
+    for word in words:
+        if len(text1 + " " + word) <= max_chars and not text2:
+            text1 += " " + word
+        else:
+            text2 += " " + word
+    return [text1.strip(), text2.strip()]
+
 
 def fit_text(draw, text, max_width, font_path, start_size, min_size):
     size = start_size
@@ -21,6 +43,15 @@ def fit_text(draw, text, max_width, font_path, start_size, min_size):
             return font
         size -= 1
     return ImageFont.truetype(font_path, min_size)
+
+
+def get_overlay_content_box(overlay_img: Image.Image) -> tuple:
+    """Returns bounding box (x1, y1, x2, y2) of the semi-transparent content box in overlay."""
+    alpha = overlay_img.split()[-1]  # Extract alpha channel
+    threshold = 20
+    binary = alpha.point(lambda p: 255 if p > threshold else 0)
+    return binary.getbbox()
+
 
 async def get_thumb(videoid: str):
     url = f"https://www.youtube.com/watch?v={videoid}"
@@ -34,13 +65,11 @@ async def get_thumb(videoid: str):
         views = result.get("viewCount", {}).get("short", "Unknown Views")
         channel = result.get("channel", {}).get("name", "Unknown Channel")
 
-        # Live detection
-        is_live = not duration or str(duration).strip().lower() in {"", "live", "live now"}
-        duration_text = "Live" if is_live else duration or "Unknown"
-
+      
         thumb_path = f"cache/thumb{videoid}.png"
         os.makedirs("cache", exist_ok=True)
-
+        
+        # Download thumbnail
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(thumbnail) as resp:
@@ -49,15 +78,17 @@ async def get_thumb(videoid: str):
                             await f.write(await resp.read())
             youtube = Image.open(thumb_path)
         except Exception as e:
+            print(f"[Thumbnail Download Failed] Using default image. Error: {e}")
             async with aiohttp.ClientSession() as session:
                 async with session.get(TELEGRAM_AUDIO_URL) as resp:
                     if resp.status == 200:
                         async with aiofiles.open(thumb_path, mode="wb") as f:
                             await f.write(await resp.read())
             youtube = Image.open(thumb_path)
-
+        
         image1 = changeImageSize(1280, 720, youtube).convert("RGBA")
 
+        # Blur + gradient background
         gradient = Image.new("RGBA", image1.size, (0, 0, 0, 255))
         enhancer = ImageEnhance.Brightness(image1.filter(ImageFilter.GaussianBlur(5)))
         blurred = enhancer.enhance(0.3)
@@ -66,70 +97,96 @@ async def get_thumb(videoid: str):
         draw = ImageDraw.Draw(background)
         font_path = "SONALI_MUSIC/assets/font3.ttf"
 
+        # Player overlay
         player = Image.open("SONALI_MUSIC/assets/sona.png").convert("RGBA").resize((1280, 720))
+        overlay_box = get_overlay_content_box(player) 
+        content_x1, content_y1, content_x2, content_y2 = overlay_box
         background.paste(player, (0, 0), player)
 
-        # --- Thumbnail box ---
-        thumb_size = 340
-        thumb_x, thumb_y = 120, 240
+        # Song thumbnail (square)
+        thumb_size = int((content_y2 - content_y1) * 0.55)
+        thumb_x = content_x1 + 76
+        thumb_y = content_y1 + ((content_y2 - content_y1 - thumb_size) // 2) + 40
+
         mask = Image.new('L', (thumb_size, thumb_size), 0)
-        ImageDraw.Draw(mask).rounded_rectangle([(0, 0), (thumb_size, thumb_size)], radius=80, fill=255)
+        draw_mask = ImageDraw.Draw(mask)
+        radius = int(thumb_size * 0.25)
+        draw_mask.rounded_rectangle([(0, 0), (thumb_size, thumb_size)], radius=radius, fill=255)
+
         thumb_square = youtube.resize((thumb_size, thumb_size))
         thumb_square.putalpha(mask)
         background.paste(thumb_square, (thumb_x, thumb_y), thumb_square)
 
-        # --- Text positions ---
-        text_x = thumb_x + thumb_size + 60
-        title_y = thumb_y + 20
-        info_y = title_y + 100
+        # Text positions
+        text_x = thumb_x + thumb_size + 30
+        title_y = thumb_y + 10
+        info_y = title_y + int(thumb_size * 0.33)
+        duration_y = info_y + int(thumb_size * 0.28)
+        icons_y = duration_y + 40  # play icons below duration
 
-        # --- Title & Channel Info ---
-        title_font = fit_text(draw, title, 600, font_path, 42, 28)
-        draw.text((text_x, title_y), title, (255, 255, 255), font=title_font)
+        def truncate_text(text, max_chars=30):
+            return (text[:max_chars - 3] + "...") if len(text) > max_chars else text
 
-        info_text = f"{channel} • {views}"
-        info_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 26)
+        short_title = truncate_text(title, max_chars=20)
+        short_channel = truncate_text(channel, max_chars=20)
+
+        # Fonts
+        title_font = fit_text(draw, short_title, 600, font_path, 42, 28)
+        info_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
+        duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 26)
+
+        # Draw title and channel info
+        draw.text((text_x, title_y), short_title, (255, 255, 255), font=title_font)
+        info_text = f"{short_channel} • {views}"
         draw.text((text_x, info_y), info_text, (200, 200, 200), font=info_font)
 
-        # --- Progress Bar ---
-        bar_x, bar_y = text_x, info_y + 50
-        bar_total_len = 480
-        bar_red_len = 180
-        draw.line([(bar_x, bar_y), (bar_x + bar_total_len, bar_y)], fill="gray", width=6)
-        draw.line([(bar_x, bar_y), (bar_x + bar_red_len, bar_y)], fill="red", width=6)
-        draw.ellipse([(bar_x + bar_red_len - 8, bar_y - 8),
-                      (bar_x + bar_red_len + 8, bar_y + 8)], fill="red")
+        # Duration bar + text
+        duration_text = duration if ":" in duration else f"00:{duration.zfill(2)}"
+        # Progress bar
+        bar_length = 220
+        bar_height = 5
+        bar_x = text_x
+        bar_y = duration_y
+        draw.line([(bar_x, bar_y), (bar_x + bar_length, bar_y)], fill="gray", width=bar_height)
+        draw.line([(bar_x, bar_y), (bar_x + bar_length // 3, bar_y)], fill="red", width=bar_height)
+        # Circle on progress
+        draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
+        # Duration text
+        draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x + bar_length - 80, bar_y + 10), f"00:00 / {duration_text} 🎵", fill=(200,200,200), font=duration_font)
 
-        # --- Duration Text ---
-        time_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 24)
-        draw.text((bar_x, bar_y + 12), "00:00", fill="white", font=time_font)
-        draw.text(
-            (bar_x + bar_total_len - (70 if is_live else 60), bar_y + 12),
-            duration_text,
-            fill="red" if is_live else "white",
-            font=time_font
-        )
-
-        # --- Play Icons ---
+        # Play icons
         icons_path = "SONALI_MUSIC/assets/play_icons.png"
         if os.path.isfile(icons_path):
-            ICONS_W, ICONS_H = 320, 40
-            ICONS_X = text_x + 70
-            ICONS_Y = bar_y + 60
-            ic = Image.open(icons_path).resize((ICONS_W, ICONS_H)).convert("RGBA")
-            r, g, b, a = ic.split()
-            white_ic = Image.merge("RGBA", (r.point(lambda *_: 255), g.point(lambda *_: 255), b.point(lambda *_: 255), a))
-            background.paste(white_ic, (ICONS_X, ICONS_Y), white_ic)
+            icons_img = Image.open(icons_path).convert("RGBA")
+            icons_w, icons_h = icons_img.size
+            scale_factor = 0.6  # scale down
+            new_size = (int(icons_w*scale_factor), int(icons_h*scale_factor))
+            icons_img = icons_img.resize(new_size, Image.LANCZOS)
+            icons_x = text_x
+            background.paste(icons_img, (icons_x, icons_y), icons_img)
 
-        # --- Watermark ---
-        watermark_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
+        # Watermark
+        watermark_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 24)
         watermark_text = "@Purvi_Bots"
-        x = background.width - 200
-        y = background.height - 40
+        if hasattr(draw, "textbbox"): 
+            bbox = draw.textbbox((0, 0), watermark_text, font=watermark_font)
+            text_width = bbox[2] - bbox[0]
+            text_height = bbox[3] - bbox[1]
+            text_size = (text_width, text_height)
+        else:  
+            text_size = draw.textsize(watermark_text, font=watermark_font)
+
+        x = background.width - text_size[0] - 25
+        y = background.height - text_size[1] - 25
+        for dx in (-1, 1):
+            for dy in (-1, 1):
+                draw.text((x + dx, y + dy), watermark_text, font=watermark_font, fill=(0, 0, 0, 180))
         draw.text((x, y), watermark_text, font=watermark_font, fill=(255, 255, 255, 240))
 
+        # Cleanup temp thumb
         try:
-            os.remove(thumb_path)
+            os.remove(f"cache/thumb{videoid}.png")
         except:
             pass
 
@@ -141,3 +198,11 @@ async def get_thumb(videoid: str):
         print(f"[get_thumb Error] {e}")
         traceback.print_exc()
         return None
+
+# ======================================================
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
+
+# 🧑‍💻 Developer : t.me/TheSigmaCoder
+# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
+# 📢 Telegram channel : t.me/Purvi_Bots
+# =======================================================
