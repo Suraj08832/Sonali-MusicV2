@@ -162,8 +162,8 @@ async def get_thumb(videoid: str):
             duration_font = ImageFont.load_default()
 
         # Draw title and channel info - WITH EMOJIS
-        draw.text((text_x, title_y), f"🎵 {short_title}", (255, 255, 255), font=title_font)
-        info_text = f"📺 {short_channel} • 👁️ {views}"
+        draw.text((text_x, title_y), f"{short_title}", (255, 255, 255), font=title_font)
+        info_text = f"{short_channel} • {views}"
         draw.text((text_x, info_y), info_text, (200, 200, 200), font=info_font)
 
         # Duration bar + text
