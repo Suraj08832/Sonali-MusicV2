@@ -1,11 +1,3 @@
-# =======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
-
-# This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
- 
-# 📩 DM for permission : @TheSigmaCoder
-# =======================================================
-
 import os
 import re
 import random
@@ -97,8 +89,13 @@ async def get_thumb(videoid: str):
         draw = ImageDraw.Draw(background)
         font_path = "SONALI_MUSIC/assets/font3.ttf"
 
-        # Player overlay
+        # Player overlay with white stroke behind
         player = Image.open("SONALI_MUSIC/assets/sona.png").convert("RGBA").resize((1280, 720))
+        # Add white stroke
+        stroke_layer = Image.new("RGBA", player.size, (255,255,255,0))
+        stroke_layer.paste(player, (0,0), player)
+        background = Image.alpha_composite(background, stroke_layer)
+
         overlay_box = get_overlay_content_box(player) 
         content_x1, content_y1, content_x2, content_y2 = overlay_box
         background.paste(player, (0, 0), player)
@@ -121,8 +118,8 @@ async def get_thumb(videoid: str):
         text_x = thumb_x + thumb_size + 30
         title_y = thumb_y + 10
         info_y = title_y + int(thumb_size * 0.33)
-        duration_y = info_y + int(thumb_size * 0.28)
-        icons_y = duration_y + 40  
+        duration_y = info_y + int(thumb_size * 0.23)  # duration thoda upar
+        icons_y = duration_y + 28  # play icons ke liye
 
         def truncate_text(text, max_chars=30):
             return (text[:max_chars - 3] + "...") if len(text) > max_chars else text
@@ -133,7 +130,7 @@ async def get_thumb(videoid: str):
         # Fonts
         title_font = fit_text(draw, short_title, 600, font_path, 42, 28)
         info_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
-        duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 26)
+        duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)  # thoda chhota
 
         # Draw title and channel info
         draw.text((text_x, title_y), short_title, (255, 255, 255), font=title_font)
@@ -152,8 +149,8 @@ async def get_thumb(videoid: str):
         # Circle on progress
         draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
         # Duration text
-        draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
-        draw.text((bar_x + bar_length - 80, bar_y + 10), f"{duration_text} 🎵", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x, bar_y + 8), "00:00", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x + bar_length - 80, bar_y + 8), f"{duration_text}", fill=(200,200,200), font=duration_font)
 
         # Play icons
         icons_path = "SONALI_MUSIC/assets/play_icons.png"
@@ -173,12 +170,11 @@ async def get_thumb(videoid: str):
             bbox = draw.textbbox((0, 0), watermark_text, font=watermark_font)
             text_width = bbox[2] - bbox[0]
             text_height = bbox[3] - bbox[1]
-            text_size = (text_width, text_height)
         else:  
-            text_size = draw.textsize(watermark_text, font=watermark_font)
+            text_width, text_height = draw.textsize(watermark_text, font=watermark_font)
 
-        x = background.width - text_size[0] - 25
-        y = background.height - text_size[1] - 25
+        x = background.width - text_width - 25
+        y = background.height - text_height - 25
         for dx in (-1, 1):
             for dy in (-1, 1):
                 draw.text((x + dx, y + dy), watermark_text, font=watermark_font, fill=(0, 0, 0, 180))
@@ -198,11 +194,3 @@ async def get_thumb(videoid: str):
         print(f"[get_thumb Error] {e}")
         traceback.print_exc()
         return None
-
-# ======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
-
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
-# =======================================================
