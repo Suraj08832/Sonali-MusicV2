@@ -133,7 +133,7 @@ async def get_thumb(videoid: str):
         # Fonts
         title_font = fit_text(draw, short_title, 600, font_path, 42, 28)
         info_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
-        duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
+        duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 20)
 
         # Draw title and channel info
         draw.text((text_x, title_y), short_title, (255, 255, 255), font=title_font)
@@ -143,7 +143,7 @@ async def get_thumb(videoid: str):
         # Duration bar + text
         duration_text = duration if ":" in duration else f"00:{duration.zfill(2)}"
         # Progress bar
-        bar_length = 220
+        bar_length = 260
         bar_height = 5
         bar_x = text_x
         bar_y = duration_y
@@ -153,7 +153,7 @@ async def get_thumb(videoid: str):
         draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
         # Duration text
         draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
-        draw.text((bar_x + bar_length - 80, bar_y + 10), f"{duration_text} 🎵", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x + bar_length - 80, bar_y + 10), f"{duration_text}", fill=(200,200,200), font=duration_font)
 
         # Play icons
         icons_path = "SONALI_MUSIC/assets/play_icons.png"
