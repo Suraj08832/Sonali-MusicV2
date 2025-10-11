@@ -53,6 +53,11 @@ def get_overlay_content_box(overlay_img: Image.Image) -> tuple:
     return binary.getbbox()
 
 
+def add_white_border(image, border_width=8):
+    """Add white border around the image"""
+    return ImageOps.expand(image, border=border_width, fill='white')
+
+
 async def get_thumb(videoid: str):
     url = f"https://www.youtube.com/watch?v={videoid}"
     try:
@@ -97,11 +102,18 @@ async def get_thumb(videoid: str):
         draw = ImageDraw.Draw(background)
         font_path = "SONALI_MUSIC/assets/font3.ttf"
 
-        # Player overlay
+        # Player overlay with white border
         player = Image.open("SONALI_MUSIC/assets/sona.png").convert("RGBA").resize((1280, 720))
-        overlay_box = get_overlay_content_box(player) 
+        
+        # Add white border to the player overlay
+        player_with_border = add_white_border(player, border_width=6)
+        
+        # Resize back to original size after adding border
+        player_with_border = player_with_border.resize((1280, 720), Image.LANCZOS)
+        
+        overlay_box = get_overlay_content_box(player_with_border) 
         content_x1, content_y1, content_x2, content_y2 = overlay_box
-        background.paste(player, (0, 0), player)
+        background.paste(player_with_border, (0, 0), player_with_border)
 
         # Song thumbnail (square)
         thumb_size = int((content_y2 - content_y1) * 0.55)
@@ -121,7 +133,7 @@ async def get_thumb(videoid: str):
         text_x = thumb_x + thumb_size + 30
         title_y = thumb_y + 10
         info_y = title_y + int(thumb_size * 0.33)
-        duration_y = info_y + int(thumb_size * 0.28) - 10  # MOVED UP BY 10 PIXELS
+        duration_y = info_y + int(thumb_size * 0.28) - 10
         icons_y = duration_y + 40  
 
         def truncate_text(text, max_chars=30):
