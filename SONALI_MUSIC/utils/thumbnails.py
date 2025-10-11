@@ -153,7 +153,7 @@ async def get_thumb(videoid: str):
         draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
         # Duration text
         draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
-        draw.text((bar_x + bar_length - 80, bar_y + 10), f"{duration_text}", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x + bar_length - 80, bar_y + 10), f"ㅤ{duration_text}", fill=(200,200,200), font=duration_font)
 
         # Play icons
         icons_path = "SONALI_MUSIC/assets/play_icons.png"
