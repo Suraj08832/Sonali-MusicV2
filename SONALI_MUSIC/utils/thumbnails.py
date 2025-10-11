@@ -46,7 +46,7 @@ def fit_text(draw, text, max_width, font_path, start_size, min_size):
 
 
 def get_overlay_content_box(overlay_img: Image.Image) -> tuple:
- 
+    
     alpha = overlay_img.split()[-1]  
     threshold = 20
     binary = alpha.point(lambda p: 255 if p > threshold else 0)
@@ -88,7 +88,7 @@ async def get_thumb(videoid: str):
         
         image1 = changeImageSize(1280, 720, youtube).convert("RGBA")
 
-        
+       
         gradient = Image.new("RGBA", image1.size, (0, 0, 0, 255))
         enhancer = ImageEnhance.Brightness(image1.filter(ImageFilter.GaussianBlur(5)))
         blurred = enhancer.enhance(0.3)
@@ -97,7 +97,7 @@ async def get_thumb(videoid: str):
         draw = ImageDraw.Draw(background)
         font_path = "SONALI_MUSIC/assets/font3.ttf"
 
-        
+       
         player = Image.open("SONALI_MUSIC/assets/sona.png").convert("RGBA").resize((1280, 720))
         overlay_box = get_overlay_content_box(player) 
         content_x1, content_y1, content_x2, content_y2 = overlay_box
@@ -121,7 +121,7 @@ async def get_thumb(videoid: str):
         text_x = thumb_x + thumb_size + 30
         title_y = thumb_y + 10
         info_y = title_y + int(thumb_size * 0.33)
-        duration_y = info_y + int(thumb_size * 0.28)
+        duration_y = info_y + int(thumb_size * 0.28) - 10  
         icons_y = duration_y + 40  
 
         def truncate_text(text, max_chars=30):
@@ -130,7 +130,7 @@ async def get_thumb(videoid: str):
         short_title = truncate_text(title, max_chars=20)
         short_channel = truncate_text(channel, max_chars=20)
 
-        
+       
         title_font = fit_text(draw, short_title, 600, font_path, 42, 28)
         info_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 22)
         duration_font = ImageFont.truetype("SONALI_MUSIC/assets/font.ttf", 20)
@@ -143,6 +143,7 @@ async def get_thumb(videoid: str):
         
         duration_text = duration if ":" in duration else f"00:{duration.zfill(2)}"
         
+       
         bar_length = 260
         bar_height = 5
         bar_x = text_x
@@ -151,11 +152,12 @@ async def get_thumb(videoid: str):
         draw.line([(bar_x, bar_y), (bar_x + bar_length // 3, bar_y)], fill="red", width=bar_height)
         # Circle on progress
         draw.ellipse([(bar_x + bar_length // 3 - 5, bar_y - 5), (bar_x + bar_length // 3 + 5, bar_y + 5)], fill="red")
-        # Duration text
+        
+        
         draw.text((bar_x, bar_y + 10), "00:00", fill=(200,200,200), font=duration_font)
-        draw.text((bar_x + bar_length - 80, bar_y + 10), f"{duration_text}", fill=(200,200,200), font=duration_font)
+        draw.text((bar_x + bar_length - 40, bar_y + 10), f"{duration_text}", fill=(200,200,200), font=duration_font)
 
-        # Play icons
+        
         icons_path = "SONALI_MUSIC/assets/play_icons.png"
         if os.path.isfile(icons_path):
             icons_img = Image.open(icons_path).convert("RGBA")
@@ -165,9 +167,7 @@ async def get_thumb(videoid: str):
             icons_img = icons_img.resize(new_size, Image.LANCZOS)
             icons_x = text_x
             background.paste(icons_img, (icons_x, icons_y), icons_img)
-
-
-        
+         
         try:
             os.remove(f"cache/thumb{videoid}.png")
         except:
@@ -188,4 +188,4 @@ async def get_thumb(videoid: str):
 # 🧑‍💻 Developer : t.me/TheSigmaCoder
 # 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
 # 📢 Telegram channel : t.me/Purvi_Bots
-# =========================================
+# =======================================================
