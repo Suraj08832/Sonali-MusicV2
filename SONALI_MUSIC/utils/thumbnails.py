@@ -97,11 +97,11 @@ async def get_thumb(videoid: str):
         draw = ImageDraw.Draw(background)
         font_path = "SONALI_MUSIC/assets/font3.ttf"
 
-       
-        player = Image.open("SONALI_MUSIC/assets/sona.png").convert("RGBA").resize((1280, 720))
-        overlay_box = get_overlay_content_box(player) 
-        content_x1, content_y1, content_x2, content_y2 = overlay_box
-        background.paste(player, (0, 0), player)
+        # Use full background with safe margins instead of overlay from `sona.png`
+        content_margin_x = 60
+        content_margin_y = 120
+        content_x1, content_y1 = content_margin_x, content_margin_y
+        content_x2, content_y2 = background.width - content_margin_x, background.height - content_margin_y
 
         
         thumb_size = int((content_y2 - content_y1) * 0.55)
