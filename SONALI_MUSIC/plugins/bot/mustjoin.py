@@ -1,9 +1,9 @@
 # =======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 🚀
 
 # This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
  
-# 📩 DM for permission : @TheSigmaCoder
+# 📩 DM for permission : @brahix
 # =======================================================
 
 from pyrogram import Client, filters
@@ -13,7 +13,7 @@ from SONALI_MUSIC import app
 
 #--------------------------
 
-MUST_JOIN = "PURVI_BOTS"
+MUST_JOIN = "about_brahix"
 #------------------------
 @app.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(app: Client, msg: Message):
@@ -35,7 +35,7 @@ async def must_join_channel(app: Client, msg: Message):
                         [
                             [
                                 InlineKeyboardButton("• ᴊᴏɪɴ •", url=link),
-                                InlineKeyboardButton("• ᴊᴏɪɴ •", url="https://t.me/ONE_WAS_SIGMA"),
+                                InlineKeyboardButton("• ᴊᴏɪɴ •", url="https://t.me/about_brahix"),
                             ]
                         ]
                     )
@@ -47,9 +47,9 @@ async def must_join_channel(app: Client, msg: Message):
         print(f"๏ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴍᴜsᴛ_ᴊᴏɪɴ ᴄʜᴀᴛ ๏: {MUST_JOIN} !")
 
 # ======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 😎
 
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
+# 🧑‍💻 Developer : t.me/brahix
+# 🔗 Source link : GitHub.com/suraj08832/Sonali-MusicV2
+# 📢 Telegram channel : t.me/about_brahix
 # =======================================================

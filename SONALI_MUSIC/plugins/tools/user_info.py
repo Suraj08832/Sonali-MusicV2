@@ -1,9 +1,9 @@
 # =======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 🚀
 
 # This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
  
-# 📩 DM for permission : @TheSigmaCoder
+# 📩 DM for permission : @brahix
 # ======================================================
 from pyrogram.enums import ParseMode
 import os
@@ -74,7 +74,7 @@ INFO_TEXT = """
 <b>● ᴘʀᴇᴍɪᴜᴍ ➠</b> {premium}
 <b>● ꜱᴄᴀᴍ ➠</b> {scam}
 
-<b>● ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ <a href="https://t.me/purvi_bots">ᴘᴜʀᴠɪ-ʙᴏᴛꜱ</a></b>
+<b>● ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ <a href="https://t.me/about_brahix">brahix-ʙᴏᴛꜱ</a></b>
 """
 
 
@@ -142,9 +142,9 @@ async def userinfo(_, message: Message):
         await message.reply_text(f"Error: {str(e)}")
 
 # ======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 😎
 
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
+# 🧑‍💻 Developer : t.me/brahix
+# 🔗 Source link : GitHub.com/suraj08832/Sonali-MusicV2
+# 📢 Telegram channel : t.me/about_brahix
 # =======================================================

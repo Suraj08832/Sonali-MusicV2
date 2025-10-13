@@ -1,9 +1,9 @@
 # =======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 🚀
 
 # This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
  
-# 📩 DM for permission : @TheSigmaCoder
+# 📩 DM for permission : @brahix
 # =======================================================
 
 import re
@@ -24,10 +24,10 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------- [ OWNER & BOT INFO ] --------------------
 
 OWNER_ID = int(getenv("OWNER_ID", 7473021518))
-OWNER_USERNAME = getenv("OWNER_USERNAME", "TheSigmaCoder")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "brahix")
 
-BOT_USERNAME = getenv("BOT_USERNAME", "Sonali_Music_Bot")
-BOT_NAME = getenv("BOT_NAME", "˹sᴏɴᴧʟɪ ꭙ ᴍᴜsɪᴄ˼ ♪")
+BOT_USERNAME = getenv("BOT_USERNAME", "saregama_musics_bot")
+BOT_NAME = getenv("BOT_NAME", "𝐌𝛊𝛕ຮ𝛖𝐫𝛊 𝐌𝛖ຮ𝛊𝛓⚡️")
 ASSUSERNAME = getenv("ASSUSERNAME", "Sonali")
 
 # -------------------- [ DATABASE / HEROKU / REPO ] --------------------
@@ -37,7 +37,7 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Im-NotCoder/Sonali-MusicV2")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/suraj08832/Sonali-MusicV2")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
 GIT_TOKEN = getenv("GIT_TOKEN", "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P")
@@ -47,8 +47,8 @@ GIT_TOKEN = getenv("GIT_TOKEN", "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P")
 LOGGER_ID = int(getenv("LOGGER_ID", -1002141133985))
 
 PRIVACY_LINK = getenv("PRIVACY_LINK", "https://telegra.ph/Privacy-Policy-for-YukkiMusic-08-30")
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/PURVI_BOTS")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/PURVI_UPDATES")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/about_brahix")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/brahix_support")
 
 # -------------------- [ LIMITS & TIME SETTINGS ] --------------------
 
@@ -128,9 +128,9 @@ if SUPPORT_CHAT and not re.match("(?:http|https)://", SUPPORT_CHAT):
     raise SystemExit("[ERROR] - SUPPORT_CHAT url is wrong. Must start with https://")
 
 # ======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 😎
 
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
+# 🧑‍💻 Developer : t.me/brahix
+# 🔗 Source link : GitHub.com/suraj08832/Sonali-MusicV2
+# 📢 Telegram channel : t.me/about_brahix
 # =======================================================

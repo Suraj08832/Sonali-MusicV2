@@ -1,9 +1,9 @@
 # =======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 🚀
 
 # This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
  
-# 📩 DM for permission : @TheSigmaCoder
+# 📩 DM for permission : @brahix
 # =======================================================
 
 
@@ -45,7 +45,7 @@ class Helper(object):
 
 ❍ /reel : ᴅᴏᴡηʟᴏᴧᴅ ɪηѕᴛᴧɢʀᴧϻ ʀєєʟ.
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
     
 
@@ -57,10 +57,10 @@ class Helper(object):
 ᴜsᴀɢᴇ :- ʙᴏᴛ ᴜsᴇʀɴᴀᴍᴇ | ɪᴅ/ᴜsᴇʀɴᴀᴍᴇ | ᴛᴇxᴛ```
 
 
-**» єx :-** `@Sonali_Music_bot @TheSigmaCoder I love You 😘`
+**» єx :-** `@saregama_musics_bot @brahix I love You 😘`
 
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -75,7 +75,7 @@ class Helper(object):
 ❍ /groupinfo : ɢєᴛ ᴀɴʏ ɢʀσᴜᴘ ɪηғᴏ.
 ❍ /gcstats : ɢєᴛ ʏσᴜʀ ɢʀσᴜᴘ sᴛᴧᴛs.
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
     
 
@@ -103,7 +103,7 @@ class Helper(object):
 ❍ /report : ʀᴇᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs
 ❍ /cancel : ꜱᴛσᴘ ᴧʟʟ ᴛᴧɢ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/ll_ALPHA_BABY_lll)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -121,7 +121,7 @@ class Helper(object):
 ❍ /q : ᴄʀєᴧᴛє ϻєssᴧɢє ǫυσᴛє.
 ❍ /q r : ᴄʀєᴧᴛє ϻєssᴧɢє ǫυσᴛє ᴡɪᴛʜ ʀєᴘʟʏ.
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -161,7 +161,7 @@ class Helper(object):
 ```
 ᴛʜɪs ᴄσϻϻᴧηᴅ ᴡɪʟʟ ᴡσʀᴋ σηʟʏ ɪғ ʏσυ ɢɪᴠє ʙᴧη ᴏʀ ɴᴇᴡ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ᴛσ ᴛʜє ʙσᴛ ᴡɪᴛʜ ᴧᴅϻɪη```
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -190,7 +190,7 @@ class Helper(object):
 ❍ /unbanall : ᴜηʙᴧη ᴧʟʟ ʙᴧη ϻєϻʙєʀs.
 ❍ /unpinall : ᴜηᴘɪη ᴧʟʟ ᴘɪη ᴍєssᴧɢᴇ.**
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -201,7 +201,7 @@ class Helper(object):
 
 **❍ /sg : ηᴧϻє & υsєʀηᴧϻє ʜɪsᴛσʀʏ.**
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -214,7 +214,7 @@ class Helper(object):
 ❍ /allrepo : ᴧʟʟ ʀєᴘᴏ ʙʏ ɢɪᴛ ᴜsєʀηᴧϻє.
 ❍ /dlrepo : ᴅσᴡηʟσᴧᴅ ᴢɪᴘ ʙʏ ʀєᴘᴏ ᴜʀʟ.**
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -233,9 +233,9 @@ class Helper(object):
 ❍ /tgm : ᴍᴇᴅɪᴀ ᴛᴏ ʟɪɴᴋ.
 ❍ /tr : ᴛʀᴧηꜱʟᴧᴛє ϻυʟᴛɪᴘʟє ʟᴧηɢυᴧɢєs.
 ❍ /bug :- ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ ғᴏʀ ʙᴜɢ ʀᴇᴘᴏʀᴛ.
-❍ /repo :- ɢᴇᴛ ᴛᴇᴀᴍ ᴘᴜʀᴠɪ ʀᴇᴘᴏs.
+❍ /repo :- ɢᴇᴛ ᴛᴇᴀᴍ brahix ʀᴇᴘᴏs.
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -271,7 +271,7 @@ class Helper(object):
 ꜱᴇᴛ ᴛʜᴇ ᴀɴᴛɪғʟᴏᴏᴅ ᴀᴄᴛɪᴏɴ ᴛᴏ ᴍᴜᴛᴇ :
 -> /floodmode mute
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
     HELP_12 = '''```
@@ -283,7 +283,7 @@ class Helper(object):
 ```
 ⋟ ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ᴀɴᴅ ᴅɪsᴍɪss ᴀɴᴅ ᴍᴇss ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇs.```
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
     
@@ -295,7 +295,7 @@ class Helper(object):
 ❍ /spurge : ᴄʟᴇᴀɴ ɢʀᴏᴜᴘ ᴍsɢ sɪʟᴇɴᴛʟʏ.
 ❍ /del : ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍsɢ ғᴏʀ ᴅᴇʟᴇᴛᴇ.
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
     
@@ -312,7 +312,7 @@ class Helper(object):
 ❖ ɴᴏᴛᴇ : ɪɴ ᴄᴀꜱᴇ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅꜱ, ᴛʜᴇ ʙᴏᴛ ᴍᴜꜱᴛ ʜᴀᴠᴇ ᴛʜᴇ ɴᴇᴡ ᴀᴅᴍɪɴ ʀɪɢʜᴛ.
 ```
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)**
 '''
 
 
@@ -333,12 +333,12 @@ class Helper(object):
 ─────────────────────────
 ʙєsᴛ ᴧηᴅ ᴄʜєᴧᴘ ɪη ᴛєʟєɢʀᴧϻ 400-500+ ϻєϻʙєʀs ɪη σηє ᴘʀσϻσᴛɪση ɢυʀᴧηᴛєє...
 ─────────────────────────
-❍ ᴄσηᴛᴧᴄᴛ - [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)
+❍ ᴄσηᴛᴧᴄᴛ - [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)
 ─────────────────────────**
 '''
     HELP_ABOUT = '''
 **─────────────────────
- ᴡєʟᴄσϻє ᴛσ ˹[ᴘᴜʀᴠɪ ʙᴏᴛs](https://t.me/PURVI_BOTS)˼ sᴛᴧᴛυs
+ ᴡєʟᴄσϻє ᴛσ ˹[brahix ʙᴏᴛs](https://t.me/about_brahix)˼ sᴛᴧᴛυs
 ──────────────────────
    ❖ │ ʀєᴧʟ ᴛɪϻє ʙσᴛ's sᴛᴧᴛυs │❖
 ──────────────────────
@@ -355,7 +355,7 @@ class Helper(object):
 ──────────────────────
 ⊚ ʟᴧsᴛ ᴄʜєᴄᴋєᴅ ση  : `01.09.2025`
 ──────────────────────
-❍ 𝐏ᴏᴡєʀєᴅ 𝖡ʏ » [⎯᪵፝֟፝֟⎯꯭𓆩꯭ 𝐀 ꯭ʟ ꯭ᴘ ꯭ʜ꯭ ᴧ꯭⎯꯭꯭‌꯭🥂꯭༎꯭ 𓆪](https://t.me/TheSigmaCoder)
+❍ 𝐏ᴏᴡєʀєᴅ 𝖡ʏ » [𝆺𝅥⃝🎧×⃪͜‌ 𝐁 𝐑 𝐀 𝐇 𝐈 𝐗 ◡̈⃝⟶📻](https://t.me/brahix)
 ──────────────────────**
 '''
     HELP_ALLBOT = '''
@@ -371,12 +371,12 @@ class Helper(object):
 ● ηᴏ ʟᴀɢ ɪssᴜєs ηᴏ ᴧᴅs ηᴏ ʙᴜɢs.
 ● sᴜᴘᴘᴏʀᴛ ᴧʟʟ ᴛɪϻє sᴛᴧʏ ᴡɪᴛʜ ᴜs.
 ──────────────────────
-❖ υᴘᴅᴧᴛєs ᴄʜᴧηηєʟ » [ᴘᴜʀᴠɪ-ʙσᴛs](https://t.me/PURVI_BOTS)
-❖ sυᴘᴘσʀᴛ ᴄʜᴧᴛ » [ᴘᴜʀᴠɪ-ᴜᴘᴅᴧᴛєs](https://t.me/PURVI_UPDATES)
-❖ ɢɪᴛ ʜᴜʙ ʟɪηᴋ » [тєᴧϻ-ᴘᴜʀᴠɪ](github.com/TEAMPURVI)
+❖ υᴘᴅᴧᴛєs ᴄʜᴧηηєʟ » [brahix-ʙσᴛs](https://t.me/about_brahix)
+❖ sυᴘᴘσʀᴛ ᴄʜᴧᴛ » [brahix-ᴜᴘᴅᴧᴛєs](https://t.me/brahix_support)
+❖ ɢɪᴛ ʜᴜʙ ʟɪηᴋ » [тєᴧϻ-brahix](github.com/TEAMPURVI)
 ──────────────────────
 ➤ ʙσᴛ sᴛᴧᴛυs & ϻσʀє ʙσᴛs - [ᴄʟɪᴄᴋ ʜєʀє](https://t.me/Purvibots)
-➤ ᴘᴧɪᴅ ᴘʀσϻσᴛɪση :- [ᴄσηᴛᴧᴄᴛ ʜєʀє](https://t.me/TheSigmaCoder)
+➤ ᴘᴧɪᴅ ᴘʀσϻσᴛɪση :- [ᴄσηᴛᴧᴄᴛ ʜєʀє](https://t.me/brahix)
 ──────────────────────**
 
 '''
@@ -421,9 +421,9 @@ class Helper(object):
 
 
 # ======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 😎
 
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
+# 🧑‍💻 Developer : t.me/brahix
+# 🔗 Source link : GitHub.com/suraj08832/Sonali-MusicV2
+# 📢 Telegram channel : t.me/about_brahix
 # =======================================================

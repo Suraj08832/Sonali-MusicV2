@@ -1,9 +1,9 @@
 # =======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 🚀
 
 # This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
  
-# 📩 DM for permission : @TheSigmaCoder
+# 📩 DM for permission : @brahix
 # =======================================================
 
 from pyrogram import filters
@@ -14,7 +14,7 @@ from SONALI_MUSIC.utils.errors import capture_err
 import httpx 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-start_txt = """**<u>❃ ᴘᴜʀᴠɪ ʙᴏᴛs ʀєᴘσs ❃</u>
+start_txt = """**<u>❃ brahix ʙᴏᴛs ʀєᴘσs ❃</u>
 
 ✼ ʀєᴘᴏ ɪs ηᴏᴡ ᴘʀɪᴠᴧᴛє ᴅᴜᴅє 😌
  
@@ -32,7 +32,7 @@ start_txt = """**<u>❃ ᴘᴜʀᴠɪ ʙᴏᴛs ʀєᴘσs ❃</u>
 async def start(_, msg):
     buttons = [
     [
-        InlineKeyboardButton("• ᴘᴜʀᴠɪ ᴍᴜsɪᴄ •", url="https://github.com/TEAMPURVI/PURVI_MUSIC"),
+        InlineKeyboardButton("• brahix ᴍᴜsɪᴄ •", url="https://github.com/TEAMPURVI/PURVI_MUSIC"),
         InlineKeyboardButton("• sᴏɴᴀʟɪ ᴍᴜsɪᴄ •", url="https://github.com/TEAMPURVI/SONALI_MUSIC")
     ],
     [
@@ -65,9 +65,9 @@ async def start(_, msg):
     )
 
 # ======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 😎
 
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
+# 🧑‍💻 Developer : t.me/brahix
+# 🔗 Source link : GitHub.com/suraj08832/Sonali-MusicV2
+# 📢 Telegram channel : t.me/about_brahix
 # =======================================================

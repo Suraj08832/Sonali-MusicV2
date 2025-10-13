@@ -1,9 +1,9 @@
 # =======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 🚀
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 🚀
 
 # This source code is under MIT License 📜 Unauthorized forking, importing, or using this code without giving proper credit will result in legal action ⚠️
  
-# 📩 DM for permission : @TheSigmaCoder
+# 📩 DM for permission : @brahix
 # =======================================================
 
 from SONALI_MUSIC import app as app
@@ -118,8 +118,8 @@ async def in_help():
     answers = [
         InlineQueryResultArticle(
             title="💒 ᴡʜɪsᴘᴇʀ 💒",
-            description=f"@Sonali_Music_Bot [USERNAME / ID] [ YOUR TEXT]",
-            input_message_content=InputTextMessageContent(f"**📍ᴜsᴀɢᴇ :-**\n\n@Sonali_Music_Bot (Target Username or ID) (Your Message).\n\n**Example :-**\n@Sonali_Music_bot @TheSigmaCoder I love You 😘"),
+            description=f"@saregama_musics_bot [USERNAME / ID] [ YOUR TEXT]",
+            input_message_content=InputTextMessageContent(f"**📍ᴜsᴀɢᴇ :-**\n\n@saregama_musics_bot (Target Username or ID) (Your Message).\n\n**Example :-**\n@saregama_musics_bot @brahix I love You 😘"),
             thumb_url="https://files.catbox.moe/ynsu0c.jpg",
             reply_markup=switch_btn
         )
@@ -140,9 +140,9 @@ async def bot_inline(_, inline_query):
                                                
 
 # ======================================================
-# ©️ 2025-26 All Rights Reserved by Purvi Bots (Im-Notcoder) 😎
+# ©️ 2025-26 All Rights Reserved by Purvi Bots (suraj08832) 😎
 
-# 🧑‍💻 Developer : t.me/TheSigmaCoder
-# 🔗 Source link : GitHub.com/Im-Notcoder/Sonali-MusicV2
-# 📢 Telegram channel : t.me/Purvi_Bots
+# 🧑‍💻 Developer : t.me/brahix
+# 🔗 Source link : GitHub.com/suraj08832/Sonali-MusicV2
+# 📢 Telegram channel : t.me/about_brahix
 # =======================================================
